@@ -72,7 +72,7 @@ REAL_RACE_CARDS = {
                 {"name": "Highland Prince", "post": 3, "jockey": "F. Prat", "trainer": "C. Brown", "weight": 120, "ml": 4.0, "eq": "", "med": "Lasix"},
                 {"name": "Royal Venture", "post": 4, "jockey": "L. Saez", "trainer": "T. Pletcher", "weight": 120, "ml": 6.0, "eq": "Blinkers ON", "med": "Lasix"},
                 {"name": "Stormy Meadow", "post": 5, "jockey": "B. Hernandez Jr.", "trainer": "K. McPeek", "weight": 120, "ml": 8.0, "eq": "", "med": "Lasix"},
-                {"name": "Celtic Monarch", "post": 6, "jockey": "J. Rosario", "trainer": "W. Mott", "weight": 120, "ml": 10.0, "eq": "", "med": "Lasix"}
+                {"name": "Merlin Monroan", "post": 6, "jockey": "Tyler Gaffalione", "trainer": "Michael J. Maker", "weight": 122, "ml": 3.5, "eq": "", "med": "Lasix"}
             ]
         },
         {
@@ -171,10 +171,11 @@ REAL_RACE_CARDS = {
                 {"name": "Guildenstern (IRE)", "post": 1, "jockey": "J. E. Morelos", "trainer": "J. Negrete", "weight": 120, "ml": 6.0, "eq": "", "med": "Lasix"},
                 {"name": "Eddie the Great", "post": 2, "jockey": "E. Perez", "trainer": "G. S. Bennett", "weight": 122, "ml": 4.0, "eq": "", "med": "Lasix"},
                 {"name": "Seaver", "post": 3, "jockey": "M. A. Vasquez", "trainer": "A. M. Sanchez", "weight": 122, "ml": 3.5, "eq": "", "med": "Lasix"},
-                {"name": "Bay of Bengal", "post": 4, "jockey": "L. Reyes", "trainer": "M. Casse", "weight": 120, "ml": 2.5, "eq": "", "med": "Lasix"},
-                {"name": "Mythical Man", "post": 5, "jockey": "E. Gonzalez", "trainer": "S. Joseph Jr.", "weight": 122, "ml": 3.0, "eq": "", "med": "Lasix"},
-                {"name": "Gold Foot", "post": 6, "jockey": "S. Leon", "trainer": "J. F. D'Angelo", "weight": 120, "ml": 8.0, "eq": "Blinkers ON", "med": "Lasix"},
-                {"name": "Grand David", "post": 7, "jockey": "M. Meneses", "trainer": "V. Barboza Jr.", "weight": 122, "ml": 10.0, "eq": "", "med": "Lasix"}
+                {"name": "Ortus", "post": 4, "jockey": "Samy Camacho", "trainer": "Lisa L. Lewis", "weight": 122, "ml": 3.5, "eq": "", "med": "Lasix"},
+                {"name": "Bay of Bengal", "post": 5, "jockey": "L. Reyes", "trainer": "M. Casse", "weight": 120, "ml": 2.5, "eq": "", "med": "Lasix"},
+                {"name": "Mythical Man", "post": 6, "jockey": "E. Gonzalez", "trainer": "S. Joseph Jr.", "weight": 122, "ml": 3.0, "eq": "", "med": "Lasix"},
+                {"name": "Gold Foot", "post": 7, "jockey": "S. Leon", "trainer": "J. F. D'Angelo", "weight": 120, "ml": 8.0, "eq": "Blinkers ON", "med": "Lasix"},
+                {"name": "Grand David", "post": 8, "jockey": "M. Meneses", "trainer": "V. Barboza Jr.", "weight": 122, "ml": 10.0, "eq": "", "med": "Lasix"}
             ]
         },
         {
@@ -184,7 +185,8 @@ REAL_RACE_CARDS = {
                 {"name": "Sunday Song", "post": 2, "jockey": "M. A. Vasquez", "trainer": "G. G. Jackson", "weight": 122, "ml": 2.5, "eq": "", "med": "Lasix"},
                 {"name": "Last Shall B First", "post": 3, "jockey": "F. Vasquez Jr.", "trainer": "C. A. Christie", "weight": 120, "ml": 4.0, "eq": "", "med": "Lasix"},
                 {"name": "Awesome Flay", "post": 4, "jockey": "S. Camacho", "trainer": "K. O'Connell", "weight": 122, "ml": 6.0, "eq": "", "med": "Lasix"},
-                {"name": "Lord Eddard Stark", "post": 5, "jockey": "L. Reyes", "trainer": "C. David", "weight": 120, "ml": 5.0, "eq": "", "med": "Lasix"}
+                {"name": "Lord Eddard Stark", "post": 5, "jockey": "L. Reyes", "trainer": "C. David", "weight": 120, "ml": 5.0, "eq": "", "med": "Lasix"},
+                {"name": "Excuses", "post": 6, "jockey": "Diego A. Herrera", "trainer": "Nicholas J. Tomlinson", "weight": 120, "ml": 4.5, "eq": "", "med": "Lasix"}
             ]
         },
         {
@@ -440,22 +442,22 @@ REAL_RACE_CARDS = {
         {
             "race_number": 3, "distance": 6.0, "surface": "D", "cond": "FT", "class": "MSW $100k (2yo F)", "purse": 100000, "rail": 0,
             "entries": [
-                {"name": "Roman Grace", "post": 1, "jockey": "Manuel Franco", "trainer": "Chad Brown", "weight": 119, "ml": 2.0, "eq": "", "med": "Lasix"},
-                {"name": "Sweet Ambition", "post": 2, "jockey": "Dylan Davis", "trainer": "Linda Rice", "weight": 119, "ml": 3.5, "eq": "", "med": "Lasix"},
-                {"name": "Silver Princess", "post": 3, "jockey": "Kendrick Carmouche", "trainer": "Todd Pletcher", "weight": 119, "ml": 3.0, "eq": "", "med": "Lasix"},
-                {"name": "Golden Hour", "post": 4, "jockey": "Jose Lezcano", "trainer": "Bill Mott", "weight": 119, "ml": 5.0, "eq": "", "med": "Lasix"},
-                {"name": "Bright Legacy", "post": 5, "jockey": "Ricardo Santana Jr.", "trainer": "Brad Cox", "weight": 119, "ml": 6.0, "eq": "Blinkers ON", "med": "Lasix"},
-                {"name": "Mystic Jewel", "post": 6, "jockey": "Samuel Marin", "trainer": "George Weaver", "weight": 119, "ml": 10.0, "eq": "", "med": "Lasix"}
+                {"name": "Saintly Villain", "post": 1, "jockey": "Rajiv Maragh", "trainer": "Thomas Morley", "weight": 119, "ml": 6.0, "eq": "", "med": "Lasix"},
+                {"name": "Morella", "post": 2, "jockey": "Manuel Franco", "trainer": "Chad Brown", "weight": 119, "ml": 2.5, "eq": "", "med": "Lasix"},
+                {"name": "Mercury Marauder", "post": 3, "jockey": "Edgard Zayas", "trainer": "Thomas Morley", "weight": 119, "ml": 3.5, "eq": "", "med": "Lasix"},
+                {"name": "Binesi", "post": 4, "jockey": "Dylan Davis", "trainer": "Brittany Russell", "weight": 119, "ml": 4.0, "eq": "", "med": "Lasix"},
+                {"name": "Summer Memories", "post": 5, "jockey": "Kendrick Carmouche", "trainer": "Todd Pletcher", "weight": 119, "ml": 5.0, "eq": "", "med": "Lasix"},
+                {"name": "Keen Interest", "post": 6, "jockey": "Ricardo Santana Jr.", "trainer": "Ray Falcone Jr.", "weight": 119, "ml": 8.0, "eq": "", "med": "Lasix"}
             ]
         },
         {
-            "race_number": 4, "distance": 8.0, "surface": "D", "cond": "FT", "class": "CLM $32k", "purse": 45000, "rail": 0,
+            "race_number": 4, "distance": 7.0, "surface": "D", "cond": "FT", "class": "CLM $25k", "purse": 45000, "rail": 0,
             "entries": [
-                {"name": "Kinetic Sky", "post": 1, "jockey": "Dylan Davis", "trainer": "Richard Dutrow Jr.", "weight": 122, "ml": 2.5, "eq": "", "med": "Lasix"},
-                {"name": "Bold Endeavor", "post": 2, "jockey": "Jose Lezcano", "trainer": "Linda Rice", "weight": 122, "ml": 2.0, "eq": "", "med": "Lasix"},
-                {"name": "Sheriff Bianco", "post": 3, "jockey": "Manuel Franco", "trainer": "Linda Rice", "weight": 122, "ml": 3.0, "eq": "", "med": "Lasix"},
-                {"name": "Unbridled Bomber", "post": 4, "jockey": "Kendrick Carmouche", "trainer": "Jim Ryerson", "weight": 122, "ml": 5.0, "eq": "", "med": "Lasix"},
-                {"name": "Quality Chic", "post": 5, "jockey": "Ricardo Santana Jr.", "trainer": "David Jacobson", "weight": 122, "ml": 6.0, "eq": "", "med": "Lasix"}
+                {"name": "Shattuck", "post": 1, "jockey": "Kendrick Carmouche", "trainer": "Joe Sharp", "weight": 122, "ml": 2.5, "eq": "", "med": "Lasix"},
+                {"name": "Sara's Shaman", "post": 2, "jockey": "Manuel Franco", "trainer": "Rob Atras", "weight": 122, "ml": 3.0, "eq": "", "med": "Lasix"},
+                {"name": "American Grant", "post": 3, "jockey": "Ricardo Santana Jr.", "trainer": "Bruce Brown", "weight": 122, "ml": 5.0, "eq": "", "med": "Lasix"},
+                {"name": "Leftembehind", "post": 4, "jockey": "Antonio Fresu", "trainer": "Rudy Rodriguez", "weight": 122, "ml": 3.5, "eq": "", "med": "Lasix"},
+                {"name": "Ice Shot", "post": 5, "jockey": "Dylan Davis", "trainer": "David Jacobson", "weight": 122, "ml": 6.0, "eq": "", "med": "Lasix"}
             ]
         },
         {
