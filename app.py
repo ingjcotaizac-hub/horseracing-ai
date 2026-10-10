@@ -9,6 +9,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import sys
 import os
+import json
 
 # Configurar ruta del proyecto
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
