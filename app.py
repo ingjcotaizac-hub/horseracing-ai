@@ -89,6 +89,15 @@ def get_available_races():
     return [dict(r) for r in races]
 
 
+def get_race_entries(race_id: str):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM today_entries WHERE race_id = ? ORDER BY post_position ASC", (race_id,))
+    rows = cursor.fetchall()
+    conn.close()
+    return [dict(r) for r in rows]
+
+
 # 3. Sidebar (Navegación e Ingesta)
 with st.sidebar:
     st.title("🏇 Horseracing AI")
@@ -97,7 +106,11 @@ with st.sidebar:
 
     nav_mode = st.radio(
         "Modo de Visualización:",
-        ["🏇 Análisis y Pronóstico en Vivo", "📊 Auditoría y Aprendizaje Continuo"],
+        [
+            "🏇 Análisis y Pronóstico en Vivo",
+            "📑 Gaceta de Past Performances (DRF)",
+            "📊 Auditoría y Aprendizaje Continuo"
+        ],
         index=0
     )
 
@@ -105,14 +118,14 @@ with st.sidebar:
     st.markdown("### 🔄 Actualizar Carreras")
 
     if st.button("🚀 Sincronizar Clase A de Hoy", use_container_width=True):
-        with st.spinner("Descargando y analizando carreras Clase A de hoy..."):
+        with st.spinner("Descargando y analizando cartelera completa de hoy (39 carreras)..."):
             res = populate_and_predict_today()
             st.success(f"¡{len(res)} carreras analizadas y guardadas para auditoría!")
             st.rerun()
 
     available_races = get_available_races()
 
-    if nav_mode == "🏇 Análisis y Pronóstico en Vivo":
+    if nav_mode in ["🏇 Análisis y Pronóstico en Vivo", "📑 Gaceta de Past Performances (DRF)"]:
         if not available_races:
             st.warning("No hay carreras programadas. Pulsa arriba para sincronizar.")
             st.stop()
@@ -181,6 +194,20 @@ if nav_mode == "📊 Auditoría y Aprendizaje Continuo":
         if not pending_rows:
             st.info("No hay predicciones pendientes. Haz clic en 'Sincronizar Clase A de Hoy' en la barra lateral.")
         else:
+            filter_track = st.selectbox(
+                "Filtrar por Hipódromo:",
+                ["Todos los Hipódromos", "Keeneland (KEE)", "Gulfstream Park (GP)", "Santa Anita Park (SA)", "Belmont at the Big A (BAQ)"]
+            )
+            track_prefix_map = {
+                "Keeneland (KEE)": "KEE",
+                "Gulfstream Park (GP)": "GP",
+                "Santa Anita Park (SA)": "SA",
+                "Belmont at the Big A (BAQ)": "BAQ"
+            }
+            if filter_track in track_prefix_map:
+                pending_rows = [r for r in pending_rows if r["track"] == track_prefix_map[filter_track]]
+
+            st.caption(f"Mostrando **{len(pending_rows)}** carreras en espera de resultados oficiales.")
             p_data = []
             for r in pending_rows:
                 p_data.append({
@@ -251,7 +278,134 @@ if nav_mode == "📊 Auditoría y Aprendizaje Continuo":
 
 
 # =========================================================================
-# VISTA 2: ANÁLISIS Y PRONÓSTICO EN VIVO
+# VISTA 2: GACETA DE PAST PERFORMANCES (ESTILO BRISNET / DRF)
+# =========================================================================
+elif nav_mode == "📑 Gaceta de Past Performances (DRF)":
+    entries = get_race_entries(selected_race_id)
+    if not entries:
+        st.warning("No hay participantes registrados para esta carrera.")
+        st.stop()
+
+    st.title("📑 Gaceta Oficial de Carreras (Past Performances)")
+    st.subheader(f"{curr_race['track_name']} — Carrera #{curr_race['race_number']}")
+    surface_map = {"D": "Arena (Dirt)", "T": "Grama (Turf)", "A": "Tapeta / Sintética"}
+
+    col_hdr1, col_hdr2, col_hdr3, col_hdr4 = st.columns(4)
+    with col_hdr1:
+        st.metric("Distancia", f"{curr_race['distance_furlongs']} Furlongs", f"~{int(curr_race['distance_furlongs']*201.16)} m")
+    with col_hdr2:
+        st.metric("Superficie", surface_map.get(curr_race['surface'], curr_race['surface']), f"Pista: {curr_race['track_condition']}")
+    with col_hdr3:
+        st.metric("Bolsa (Purse)", f"${curr_race['purse']:,.0f}" if curr_race['purse'] else "N/A", f"Clase: {curr_race['race_class']}")
+    with col_hdr4:
+        st.metric("Participantes", f"{len(entries)} Ejemplares", f"Baranda: {curr_race.get('rail_distance_feet', 0)} ft")
+
+    st.markdown("---")
+
+    # 1. Tabla Resumen de Inscritos
+    st.markdown("### 📋 Nómina Oficial y Conexiones")
+    roster_rows = []
+    for e in entries:
+        works = json.loads(e.get("workouts_json") or "[]")
+        work_display = "Sin registro reciente"
+        if works:
+            w = works[0]
+            bullet = " 🎯 BULLET" if w.get("rank", 99) <= 2 else ""
+            work_display = f"{w['distance_furlongs']}f en {w['time_seconds']}s ({w.get('rank', '-')}/{w.get('total_workers', '-')}){bullet}"
+
+        roster_rows.append({
+            "PP": e["post_position"],
+            "Ejemplar": e["horse_name"],
+            "ML Odds": f"{e['morning_line_odds']:.1f}-1",
+            "Jinete": e["jockey"],
+            "Entrenador": e["trainer"],
+            "Peso (lbs)": e["weight"],
+            "Aperos": e.get("equipment") or "Normal",
+            "Medicación": e.get("medication") or "Ninguna",
+            "Último Ejercicio": work_display
+        })
+
+    st.dataframe(pd.DataFrame(roster_rows), use_container_width=True, hide_index=True)
+
+    st.markdown("---")
+
+    # 2. Selector o Vista de Past Performances
+    st.markdown("### 🔍 Fichas Detalladas de Actuaciones Anteriores (Running Lines)")
+
+    horse_names = [e["horse_name"] for e in entries]
+    view_filter = st.radio(
+        "Modo de Lectura:",
+        ["📖 Ver Todos los Ejemplares (Gaceta Completa)", "🎯 Inspeccionar Ejemplar Individual"],
+        horizontal=True
+    )
+
+    if view_filter == "🎯 Inspeccionar Ejemplar Individual":
+        chosen_horse = st.selectbox("Selecciona Ejemplar a Estudiar:", horse_names)
+        displayed_entries = [e for e in entries if e["horse_name"] == chosen_horse]
+    else:
+        displayed_entries = entries
+
+    for e in displayed_entries:
+        h_name = e["horse_name"]
+        pps = get_horse_past_performances(h_name, before_date=curr_race["race_date"])
+        works = json.loads(e.get("workouts_json") or "[]")
+
+        bullet_badge = " 🎯 [BULLET WORKOUT]" if works and works[0].get("rank", 99) <= 2 else ""
+        eq_badge = f" | Aperos: {e['equipment']}" if e.get("equipment") else ""
+
+        with st.container():
+            st.markdown(f"""
+            <div style="background-color: #1E293B; padding: 12px 18px; border-radius: 8px; border-left: 6px solid #3B82F6; margin-top: 15px; margin-bottom: 8px;">
+                <h4 style="margin: 0; color: #FFFFFF;">
+                    #{e['post_position']} <b>{h_name}</b> &nbsp;
+                    <span style="font-size: 14px; color: #93C5FD;">(ML: {e['morning_line_odds']:.1f}-1)</span>
+                    <span style="font-size: 13px; color: #34D399; font-weight: bold;">{bullet_badge}</span>
+                </h4>
+                <div style="font-size: 13px; color: #CBD5E1; margin-top: 5px;">
+                    <b>Jinete:</b> {e['jockey']} &nbsp;|&nbsp; 
+                    <b>Entrenador:</b> {e['trainer']} &nbsp;|&nbsp; 
+                    <b>Peso:</b> {e['weight']} lbs &nbsp;|&nbsp; 
+                    <b>Medicación:</b> {e.get('medication', 'Lasix')}{eq_badge}
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+            # Aprontes matutinos
+            if works:
+                w_str_list = []
+                for w in works:
+                    rank_str = f"({w.get('rank', '-')}/{w.get('total_workers', '-')})" if "rank" in w else ""
+                    b_mark = " 🎯 BULLET" if w.get("rank", 99) <= 2 else ""
+                    w_str_list.append(f"📅 {w['date']}: {w['distance_furlongs']}f en {w['time_seconds']}s {rank_str}{b_mark}")
+                st.caption(f"**Ejercicios Matutinos (Breezes):** {' | '.join(w_str_list)}")
+
+            # Tabla de actuaciones pasadas
+            if not pps:
+                st.info("ℹ️ Sin actuaciones previas oficiales registradas (Ejemplar Debutante).")
+            else:
+                pp_display = []
+                for p in pps:
+                    pos_str = "🥇 1º (Ganó)" if p["finish_position"] == 1 else f"{p['finish_position']}º (+{p['lengths_behind']} cpos)"
+                    speed_str = f"{p['speed_rating']:.1f}" if p.get("speed_rating") else "N/A"
+                    time_str = f"{p['final_time_sec']:.2f}s" if p.get("final_time_sec") else "N/A"
+                    pp_display.append({
+                        "Fecha": p["race_date"],
+                        "Hipódromo": p["track"],
+                        "Distancia": f"{p['distance_furlongs']}f",
+                        "Sup": p["surface"],
+                        "Pista": p["track_condition"],
+                        "Clase": p["race_class"],
+                        "Llegada": pos_str,
+                        "Tiempo": time_str,
+                        "Speed Figure (Beyer/Brisnet)": speed_str,
+                        "Jinete": p["jockey"],
+                        "Dividendo": f"{p['official_odds']:.1f}-1"
+                    })
+                st.dataframe(pd.DataFrame(pp_display), use_container_width=True, hide_index=True)
+
+
+# =========================================================================
+# VISTA 3: ANÁLISIS Y PRONÓSTICO EN VIVO
 # =========================================================================
 elif nav_mode == "🏇 Análisis y Pronóstico en Vivo":
     analysis = analyze_race_field(selected_race_id)
