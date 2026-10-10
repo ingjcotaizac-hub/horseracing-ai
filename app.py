@@ -167,9 +167,9 @@ if nav_mode == "📊 Auditoría y Aprendizaje Continuo":
     with kpi1:
         st.metric("Carreras Evaluadas", summary["total_evaluated"])
     with kpi2:
-        st.metric("Acierto a Ganador (Win %)", f"{summary['win_rate']}%")
+        st.metric("Acierto a Ganador (Win %)", f"{summary['win_rate']}%", help="Criterio estricto: solo cuenta como acierto si el Top Pick gana el 1er lugar.")
     with kpi3:
-        st.metric("Top 3 en Pizarra (ITM %)", f"{summary['itm_rate']}%")
+        st.metric("Balance Ganados / Fallos", f"{summary.get('wins', 0)} Ganados / {summary.get('losses', 0)} Fallos")
     with kpi4:
         st.metric("Retorno Financiero (ROI)", f"{summary['roi_pct']:+.1f}%")
     with kpi5:
@@ -235,7 +235,7 @@ if nav_mode == "📊 Auditoría y Aprendizaje Continuo":
         else:
             h_data = []
             for r in history_rows:
-                res_badge = "🏆 ACIERTO GANADOR" if r["is_hit"] == 1 else ("🥈 TOP 3 (ITM)" if r["in_the_money"] == 1 else "❌ NO ACERTADO")
+                res_badge = "🏆 ACIERTO (1º Ganador)" if r["is_hit"] == 1 else "❌ FALLO (No Ganó)"
                 h_data.append({
                     "Carrera": f"{r['track']} R{r['race_number']} ({r['race_date']})",
                     "Top Pick Elegido": r["top_pick"],
