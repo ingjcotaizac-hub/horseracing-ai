@@ -15,12 +15,12 @@ import os
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from src.generate_full_cards import generate_full_cards
+from src.ingest_real_cards import ingest_real_cards
 
 
 def populate_and_predict_today():
-    """Genera y pronostica la cartelera completa de todos los hipódromos Clase A."""
-    return generate_full_cards()
+    """Genera y pronostica la cartelera completa con los caballos REALES de todos los hipódromos Clase A."""
+    return ingest_real_cards()
 
 
 if __name__ == "__main__":
