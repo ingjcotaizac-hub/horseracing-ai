@@ -8,6 +8,12 @@ import json
 import subprocess
 import requests
 
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 def create_and_push_repo():
     # 1. Leer el token desde mcp_config.json
     mcp_path = r"C:\Users\Otaingenio\.gemini\config\mcp_config.json"
