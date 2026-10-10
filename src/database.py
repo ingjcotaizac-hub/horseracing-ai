@@ -87,6 +87,37 @@ def init_database() -> None:
     );
     """)
 
+    # 5. Tabla de Auditoría y Aprendizaje Continuo de Predicciones
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS predictions_audit (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        race_id TEXT UNIQUE NOT NULL,
+        track TEXT NOT NULL,
+        race_date TEXT NOT NULL,
+        race_number INTEGER NOT NULL,
+        distance_furlongs REAL NOT NULL,
+        surface TEXT NOT NULL,
+        race_class TEXT,
+        top_pick TEXT NOT NULL,
+        top_pick_odds REAL,
+        top_pick_score REAL,
+        value_pick TEXT,
+        value_pick_odds REAL,
+        longshot_pick TEXT,
+        pace_scenario TEXT,
+        pace_pressure REAL,
+        exacta_box TEXT,
+        created_at TEXT NOT NULL,
+        status TEXT DEFAULT 'PENDING',  -- 'PENDING', 'EVALUATED'
+        actual_winner TEXT,
+        actual_odds REAL,
+        is_hit INTEGER,                 -- 1 si ganó el Top Pick, 0 si no
+        in_the_money INTEGER,           -- 1 si llegó 1º, 2º o 3º
+        profit_loss REAL,               -- Retorno neto sobre apuesta de $2 Win
+        learning_notes TEXT
+    );
+    """)
+
     # Migraciones seguras para bases de datos existentes
     try:
         cursor.execute("ALTER TABLE races ADD COLUMN rail_distance_feet REAL DEFAULT 0;")
