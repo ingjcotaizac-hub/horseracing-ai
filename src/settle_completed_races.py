@@ -91,6 +91,27 @@ OFFICIAL_WINNERS_OCT_10 = [
         "odds": 3.5,
         "second": "Shattuck",
         "notes": "Leftembehind prevaleció en el duelo de recta en 7f Dirt."
+    },
+    {
+        "race_id": "GP_20261010_R04",
+        "winner": "Souffle On Fire",
+        "odds": 6.0,
+        "second": "Iliana",
+        "notes": "Souffle On Fire se impuso en 8.0f Turf a cuota 6.0-1."
+    },
+    {
+        "race_id": "GP_20261010_R05",
+        "winner": "Maitre D",
+        "odds": 20.0,
+        "second": "Hottakejake",
+        "notes": "Maitre D sorprendió a 20-1 en 5.5f Tapeta."
+    },
+    {
+        "race_id": "KEE_20261010_R04",
+        "winner": "Money Supply",
+        "odds": 3.0,
+        "second": "Overstatement",
+        "notes": "Money Supply (Irad Ortiz Jr.) remató con fuerza en 8.5f Dirt."
     }
 ]
 
