@@ -144,6 +144,7 @@ def init_database() -> None:
     cursor.execute("CREATE INDEX IF NOT EXISTS idx_horse_name ON race_results(horse_name);")
     cursor.execute("CREATE INDEX IF NOT EXISTS idx_race_date ON races(race_date);")
     cursor.execute("CREATE INDEX IF NOT EXISTS idx_entries_race ON today_entries(race_id);")
+    cursor.execute("CREATE UNIQUE INDEX IF NOT EXISTS idx_entries_unique ON today_entries(race_id, horse_name);")
 
     conn.commit()
     conn.close()

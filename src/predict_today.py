@@ -192,11 +192,95 @@ def populate_and_predict_today():
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """, pr)
 
+    # -------------------------------------------------------------
+    # CARRERA 5: GULFSTREAM PARK - CARRERA 7 (The Chasing Artie Handicap)
+    # 5.0 Furlongs en Grama (Turf Sprint), Bolsa $60,000
+    # -------------------------------------------------------------
+    r5_id = "GP_20261010_R07"
+    cursor.execute("""
+        INSERT OR REPLACE INTO races (race_id, track, race_date, race_number, distance_furlongs, surface, track_condition, race_class, purse, rail_distance_feet, status)
+        VALUES (?, 'GP', '2026-10-10', 7, 5.0, 'T', 'FM', 'STK - The Chasing Artie Handicap', 60000, 10, 'SCHEDULED')
+    """, (r5_id,))
+
+    r5_entries = [
+        (r5_id, "Full Disclosure", 1, "Marcos Meneses", "Aditi Jehaludi", 118, 12.0, "", "Lasix", 0, "[]"),
+        (r5_id, "Extendo", 2, "Edwin Gonzalez", "Joseph Orseno", 120, 6.0, "", "Lasix", 0, "[]"),
+        (r5_id, "Esperon", 3, "Diego Herrera", "J. David Braddy", 119, 8.0, "", "Lasix", 0, "[]"),
+        (r5_id, "Axthelm", 4, "Miguel Vasquez", "Bobby Dibona", 121, 5.0, "", "Lasix", 0, "[]"),
+        (r5_id, "Itza Boss", 5, "Leonel Reyes", "Jose F. D'Angelo", 118, 10.0, "", "Lasix", 0, "[]"),
+        (r5_id, "Rouki", 6, "Samy Camacho", "Gerald Bennett", 116, 15.0, "", "Lasix", 0, "[]"),
+        (r5_id, "Souper Quest", 7, "Sonny Leon", "Mark Casse", 124, 2.5, "", "Lasix", 0, json.dumps([{"date": "2026-10-04", "distance_furlongs": 4.0, "time_seconds": 46.80, "workout_type": "B", "rank": 1, "total_workers": 45}])),
+        (r5_id, "Naughty Rascal", 8, "J.G. Ocasio", "Gerald Bennett", 116, 20.0, "", "Lasix", 0, "[]"),
+        (r5_id, "Mattingly", 9, "Fernando De La Cruz", "Joseph Orseno", 122, 3.0, "", "Lasix", 0, json.dumps([{"date": "2026-10-03", "distance_furlongs": 4.0, "time_seconds": 47.30, "workout_type": "B", "rank": 2, "total_workers": 40}])),
+        (r5_id, "Guns Loaded", 10, "M. Husbands", "Saffie Joseph Jr.", 119, 8.0, "Blinkers ON", "Lasix", 0, "[]"),
+        (r5_id, "Three Zero", 11, "Nik Juarez", "Carlos David", 118, 12.0, "", "Lasix", 0, "[]"),
+        (r5_id, "Ajaayb", 12, "Jose Morelos", "Juan Arias", 116, 15.0, "", "Lasix", 0, "[]"),
+    ]
+    cursor.executemany("""
+        INSERT OR REPLACE INTO today_entries (race_id, horse_name, post_position, jockey, trainer, weight, morning_line_odds, equipment, medication, jockey_change, workouts_json)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    """, r5_entries)
+
+    past_races_r5 = [
+        ("WO_20260810_R06", "Souper Quest", 4, "Sonny Leon", "Mark Casse", 124, 1, 0.0, 55.40, 21.80, 44.20, 99.0, 2.2),
+        ("GP_20260905_R07", "Mattingly", 2, "Fernando De La Cruz", "Joseph Orseno", 122, 1, 0.0, 55.60, 21.90, 44.40, 98.2, 2.8),
+        ("GP_20260905_R07", "Axthelm", 5, "Miguel Vasquez", "Bobby Dibona", 121, 2, 0.5, 55.70, 22.10, 44.60, 96.5, 4.5),
+        ("GP_20260905_R07", "Extendo", 1, "Edwin Gonzalez", "Joseph Orseno", 120, 3, 1.25, 55.85, 22.00, 44.50, 95.0, 5.0),
+    ]
+    for pr in past_races_r5:
+        rid, h, p, j, t, w, fin, marg, f_time, f2, f4, spd, odds = pr
+        cursor.execute("INSERT OR IGNORE INTO races (race_id, track, race_date, race_number, distance_furlongs, surface, track_condition, race_class, purse, status) VALUES (?, 'GP', '2026-09-05', 7, 5.0, 'T', 'FM', 'STK', 60000, 'OFFICIAL')", (rid,))
+        cursor.execute("""
+            INSERT OR REPLACE INTO race_results (race_id, horse_name, post_position, jockey, trainer, weight_carried, finish_position, lengths_behind, final_time_sec, fractional_2f_sec, fractional_4f_sec, speed_rating, official_odds)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """, pr)
+
+    # -------------------------------------------------------------
+    # CARRERA 6: GULFSTREAM PARK - CARRERA 10 (The Daring Kathy Handicap)
+    # 8.5 Furlongs en Grama (Turf), Bolsa $60,000 (Yeguas 3yo+)
+    # -------------------------------------------------------------
+    r6_id = "GP_20261010_R10"
+    cursor.execute("""
+        INSERT OR REPLACE INTO races (race_id, track, race_date, race_number, distance_furlongs, surface, track_condition, race_class, purse, rail_distance_feet, status)
+        VALUES (?, 'GP', '2026-10-10', 10, 8.5, 'T', 'FM', 'STK - The Daring Kathy Handicap', 60000, 10, 'SCHEDULED')
+    """, (r6_id,))
+
+    r6_entries = [
+        (r6_id, "Hello Hello Hello", 1, "M. Husbands", "Saffie Joseph Jr.", 118, 8.0, "", "Lasix", 0, "[]"),
+        (r6_id, "Turino", 2, "R. Hughes", "Saffie Joseph Jr.", 119, 6.0, "", "Lasix", 0, "[]"),
+        (r6_id, "Oshala", 3, "Heriberto Figueroa", "Nader Moubarak", 117, 12.0, "", "Lasix", 0, "[]"),
+        (r6_id, "Souper Zonda", 4, "Sonny Leon", "Mark Casse", 123, 2.5, "", "Lasix", 0, json.dumps([{"date": "2026-10-04", "distance_furlongs": 4.0, "time_seconds": 47.90, "workout_type": "B", "rank": 2, "total_workers": 45}])),
+        (r6_id, "Defiant Lass", 5, "Samy Camacho", "James Toner", 118, 8.0, "", "Lasix", 0, "[]"),
+        (r6_id, "Miss Mary Nell", 6, "J.G. Ocasio", "Carlos David", 118, 10.0, "", "Lasix", 0, "[]"),
+        (r6_id, "Crafty Collector", 7, "Marcos Meneses", "Gerald Bennett", 116, 15.0, "", "Lasix", 0, "[]"),
+        (r6_id, "Lets Go Koko", 8, "Edwin Gonzalez", "Ronnie Miller", 119, 8.0, "", "Lasix", 0, "[]"),
+        (r6_id, "Vincey Girl", 9, "Leonel Reyes", "Jose F. D'Angelo", 121, 3.5, "Blinkers ON", "Lasix", 0, json.dumps([{"date": "2026-10-03", "distance_furlongs": 5.0, "time_seconds": 59.90, "workout_type": "H", "rank": 1, "total_workers": 38}])),
+        (r6_id, "Fantasy Performer", 10, "Miguel Vasquez", "Cam Gambolati", 120, 5.0, "", "Lasix", 0, "[]"),
+        (r6_id, "Janana Han", 11, "Y. Torres", "Garth Rangel", 114, 20.0, "", "Lasix", 0, "[]"),
+    ]
+    cursor.executemany("""
+        INSERT OR REPLACE INTO today_entries (race_id, horse_name, post_position, jockey, trainer, weight, morning_line_odds, equipment, medication, jockey_change, workouts_json)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    """, r6_entries)
+
+    past_races_r6 = [
+        ("GP_20260822_R08", "Souper Zonda", 3, "Sonny Leon", "Mark Casse", 123, 1, 0.0, 101.50, 23.40, 47.20, 96.8, 2.2),
+        ("GP_20260822_R08", "Vincey Girl", 5, "Leonel Reyes", "Jose F. D'Angelo", 121, 2, 0.75, 101.65, 23.60, 47.50, 95.5, 3.8),
+        ("GP_20260822_R08", "Fantasy Performer", 2, "Miguel Vasquez", "Cam Gambolati", 120, 3, 1.5, 101.80, 23.20, 46.90, 94.2, 5.5),
+    ]
+    for pr in past_races_r6:
+        rid, h, p, j, t, w, fin, marg, f_time, f2, f4, spd, odds = pr
+        cursor.execute("INSERT OR IGNORE INTO races (race_id, track, race_date, race_number, distance_furlongs, surface, track_condition, race_class, purse, status) VALUES (?, 'GP', '2026-08-22', 8, 8.5, 'T', 'FM', 'STK', 60000, 'OFFICIAL')", (rid,))
+        cursor.execute("""
+            INSERT OR REPLACE INTO race_results (race_id, horse_name, post_position, jockey, trainer, weight_carried, finish_position, lengths_behind, final_time_sec, fractional_2f_sec, fractional_4f_sec, speed_rating, official_odds)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """, pr)
+
     conn.commit()
     conn.close()
 
     # 2. EJECUTAR EL MOTOR Y GUARDAR EN PREDICTIONS_AUDIT
-    today_race_ids = [r1_id, r2_id, r3_id, r4_id]
+    today_race_ids = [r1_id, r2_id, r3_id, r4_id, r5_id, r6_id]
     audit_results = []
 
     conn = get_db_connection()
