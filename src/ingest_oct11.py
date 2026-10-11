@@ -1,7 +1,7 @@
 """
 Módulo de Ingesta Oficial y Pronósticos para el Domingo 11 de Octubre de 2026:
 - Keeneland (KEE): Carreras 1 a 9 (con G2 Franklin Stakes $400k)
-- Belmont at the Big A (BAQ): Carreras 1 a 9 (con Carle Place Stakes y MSW $100k)
+- Belmont at the Big A (BAQ): Carreras 1 a 9 (con MSW $100k y AOC $105k)
 - Gulfstream Park (GP): Carreras 1 a 9 (con Claimings y AOC)
 - Santa Anita Park (SA): Carreras 1 a 9 (con California Distaff Handicap $100k Downhill Turf)
 
@@ -34,77 +34,94 @@ REAL_CARDS_OCT_11 = {
             "entries": [
                 {"name": "Pike Place", "post": 1, "jockey": "F. Arrieta", "trainer": "T. L. Van Berg", "weight": 122, "ml": 4.5, "eq": "", "med": "Lasix"},
                 {"name": "Bebedouro", "post": 2, "jockey": "Y. Hazlewood", "trainer": "C. Williams", "weight": 122, "ml": 6.0, "eq": "", "med": "Lasix"},
-                {"name": "Indy Charges On", "post": 3, "jockey": "F. Geroux", "trainer": "B. Cox", "weight": 122, "ml": 3.0, "eq": "Blinkers ON", "med": "Lasix"},
-                {"name": "Trusty Rusty", "post": 4, "jockey": "F. Prat", "trainer": "B. Baffert", "weight": 122, "ml": 2.5, "eq": "", "med": "Lasix"},
-                {"name": "Creative Minister", "post": 5, "jockey": "B. Hernandez Jr.", "trainer": "K. McPeek", "weight": 122, "ml": 3.5, "eq": "", "med": "Lasix"},
-                {"name": "Ur Benja", "post": 6, "jockey": "J. L. Ortiz", "trainer": "B. Walsh", "weight": 122, "ml": 10.0, "eq": "", "med": "Lasix", "scratched": 1}
+                {"name": "Indy Charges On", "post": 3, "jockey": "J. L. Ortiz", "trainer": "L. Gaudet", "weight": 122, "ml": 3.0, "eq": "Blinkers ON", "med": "Lasix"},
+                {"name": "Trusty Rusty", "post": 4, "jockey": "L. Saez", "trainer": "R. Hess Jr.", "weight": 122, "ml": 2.5, "eq": "", "med": "Lasix"},
+                {"name": "Creative Minister", "post": 5, "jockey": "R. Bejarano", "trainer": "C. Hartman", "weight": 122, "ml": 3.5, "eq": "", "med": "Lasix"},
+                {"name": "Ur Benja", "post": 6, "jockey": "J. Graham", "trainer": "J. Aranha", "weight": 122, "ml": 10.0, "eq": "", "med": "Lasix", "scratched": 1}
             ]
         },
         {
-            "race_number": 2, "distance": 8.5, "surface": "D", "cond": "FT", "class": "MCL $30k", "purse": 48000, "rail": 0,
+            "race_number": 2, "distance": 8.5, "surface": "D", "cond": "FT", "class": "MCL $30k", "purse": 53000, "rail": 0,
             "entries": [
                 {"name": "Soho Jimmy", "post": 1, "jockey": "V. R. Carrasco", "trainer": "T. Humphries", "weight": 120, "ml": 4.0, "eq": "", "med": "Lasix"},
-                {"name": "Mr. All In", "post": 2, "jockey": "A. Beschizza", "trainer": "J. Ennis", "weight": 120, "ml": 5.0, "eq": "", "med": "Lasix"},
-                {"name": "Unionista", "post": 3, "jockey": "L. Saez", "trainer": "M. Maker", "weight": 120, "ml": 3.0, "eq": "Blinkers ON", "med": "Lasix"},
-                {"name": "King of the Road", "post": 4, "jockey": "T. Gaffalione", "trainer": "J. Sharp", "weight": 120, "ml": 3.5, "eq": "", "med": "Lasix"},
-                {"name": "Blue Mountain", "post": 5, "jockey": "C. Lanerie", "trainer": "I. Wilkes", "weight": 120, "ml": 8.0, "eq": "", "med": "Lasix"},
-                {"name": "Copper Penny", "post": 6, "jockey": "G. Corrales", "trainer": "W. Ward", "weight": 120, "ml": 12.0, "eq": "", "med": "Lasix"},
-                {"name": "Fast Fleet", "post": 7, "jockey": "J. A. Torres", "trainer": "S. Asmussen", "weight": 120, "ml": 6.0, "eq": "", "med": "Lasix"}
+                {"name": "Mr. All In", "post": 2, "jockey": "J. A. Torres", "trainer": "W. B. Calhoun", "weight": 120, "ml": 5.0, "eq": "", "med": "Lasix"},
+                {"name": "Unionista", "post": 3, "jockey": "R. Bejarano", "trainer": "E. Harty", "weight": 120, "ml": 3.0, "eq": "Blinkers ON", "med": "Lasix"},
+                {"name": "Jem's Hershey Kiss", "post": 4, "jockey": "D. E. Sheehy", "trainer": "G. Foley", "weight": 120, "ml": 8.0, "eq": "", "med": "Lasix"},
+                {"name": "Page Two", "post": 5, "jockey": "M. Gutierrez", "trainer": "V. Oliver", "weight": 120, "ml": 10.0, "eq": "", "med": "Lasix"},
+                {"name": "Straitshootinlarry", "post": 6, "jockey": "I. Ortiz Jr.", "trainer": "W. Ward", "weight": 120, "ml": 3.5, "eq": "", "med": "Lasix"},
+                {"name": "Bourbonkoma", "post": 7, "jockey": "C. Torres", "trainer": "R. Brisset", "weight": 120, "ml": 6.0, "eq": "", "med": "Lasix"},
+                {"name": "Flume's Vino", "post": 8, "jockey": "A. Beschizza", "trainer": "J. Ennis", "weight": 120, "ml": 12.0, "eq": "", "med": "Lasix"},
+                {"name": "Torched", "post": 9, "jockey": "L. Saez", "trainer": "J. Sharp", "weight": 120, "ml": 4.5, "eq": "", "med": "Lasix"},
+                {"name": "Diamond Eyed Jack", "post": 10, "jockey": "T. Gaffalione", "trainer": "B. Walsh", "weight": 120, "ml": 5.0, "eq": "Blinkers ON", "med": "Lasix"},
+                {"name": "Hyperlink", "post": 11, "jockey": "Y. Hazlewood", "trainer": "C. Williams", "weight": 120, "ml": 15.0, "eq": "", "med": "Lasix"}
             ]
         },
         {
-            "race_number": 3, "distance": 6.0, "surface": "D", "cond": "FT", "class": "MSW", "purse": 100000, "rail": 0,
+            "race_number": 3, "distance": 8.0, "surface": "D", "cond": "FT", "class": "CLM $20k", "purse": 57000, "rail": 0,
             "entries": [
-                {"name": "St. Andrews Bay", "post": 1, "jockey": "F. Prat", "trainer": "B. Baffert", "weight": 119, "ml": 2.5, "eq": "", "med": "Lasix"},
-                {"name": "Noble Archer", "post": 2, "jockey": "F. Geroux", "trainer": "B. Cox", "weight": 119, "ml": 3.5, "eq": "", "med": "Lasix"},
-                {"name": "Kentucky Gold", "post": 3, "jockey": "T. Gaffalione", "trainer": "M. Casse", "weight": 119, "ml": 4.5, "eq": "", "med": "Lasix"},
-                {"name": "Silver Crest", "post": 4, "jockey": "L. Saez", "trainer": "T. Pletcher", "weight": 119, "ml": 6.0, "eq": "Blinkers ON", "med": "Lasix"},
-                {"name": "Thunder Run", "post": 5, "jockey": "J. L. Ortiz", "trainer": "C. Brown", "weight": 119, "ml": 8.0, "eq": "", "med": "Lasix"},
-                {"name": "River Wild", "post": 6, "jockey": "B. Hernandez Jr.", "trainer": "K. McPeek", "weight": 119, "ml": 15.0, "eq": "", "med": "Lasix"}
+                {"name": "Little Dixie", "post": 1, "jockey": "F. Arrieta", "trainer": "E. Kenneally", "weight": 121, "ml": 4.0, "eq": "", "med": "Lasix", "scratched": 1},
+                {"name": "Hidden Recipe", "post": 2, "jockey": "Y. Hazlewood", "trainer": "C. Williams", "weight": 121, "ml": 4.5, "eq": "", "med": "Lasix", "scratched": 1},
+                {"name": "Ibuki", "post": 3, "jockey": "C. Torres", "trainer": "R. Brisset", "weight": 121, "ml": 3.0, "eq": "", "med": "Lasix"},
+                {"name": "Nilos Rose", "post": 4, "jockey": "K. J. Asmussen", "trainer": "S. Asmussen", "weight": 121, "ml": 6.0, "eq": "", "med": "Lasix"},
+                {"name": "Wits and Wagers", "post": 5, "jockey": "R. Bejarano", "trainer": "C. Hartman", "weight": 121, "ml": 3.5, "eq": "", "med": "Lasix"},
+                {"name": "Sassy Princess", "post": 6, "jockey": "T. Gaffalione", "trainer": "D. Jacobson", "weight": 121, "ml": 2.5, "eq": "", "med": "Lasix"},
+                {"name": "Fugitive Star", "post": 7, "jockey": "L. Saez", "trainer": "J. Sharp", "weight": 121, "ml": 12.0, "eq": "Blinkers ON", "med": "Lasix"},
+                {"name": "Coras Legacy", "post": 8, "jockey": "V. R. Carrasco", "trainer": "J. Ennis", "weight": 121, "ml": 15.0, "eq": "", "med": "Lasix"}
             ]
         },
         {
-            "race_number": 4, "distance": 8.5, "surface": "T", "cond": "FM", "class": "AOC $110k", "purse": 110000, "rail": 10,
+            "race_number": 4, "distance": 8.5, "surface": "D", "cond": "FT", "class": "CLM $40k", "purse": 58000, "rail": 0,
             "entries": [
-                {"name": "Turf Master", "post": 1, "jockey": "J. Rosario", "trainer": "C. Clement", "weight": 121, "ml": 3.0, "eq": "", "med": "Lasix"},
-                {"name": "British Sea", "post": 2, "jockey": "F. Prat", "trainer": "C. Brown", "weight": 121, "ml": 2.5, "eq": "", "med": "Lasix"},
-                {"name": "Laker Mamba", "post": 3, "jockey": "F. Geroux", "trainer": "M. Maker", "weight": 121, "ml": 5.0, "eq": "", "med": "Lasix"},
-                {"name": "Royal Whisper", "post": 4, "jockey": "L. Saez", "trainer": "G. Motion", "weight": 121, "ml": 8.0, "eq": "", "med": "Lasix"},
-                {"name": "Bold Venture", "post": 5, "jockey": "T. Gaffalione", "trainer": "B. Walsh", "weight": 121, "ml": 10.0, "eq": "Blinkers ON", "med": "Lasix"},
-                {"name": "Shadow Knight", "post": 6, "jockey": "R. Bejarano", "trainer": "D. Romans", "weight": 121, "ml": 12.0, "eq": "", "med": "Lasix"}
+                {"name": "Quinn's Promise", "post": 1, "jockey": "K. J. Asmussen", "trainer": "S. Asmussen", "weight": 120, "ml": 6.0, "eq": "", "med": "Lasix"},
+                {"name": "Oraia", "post": 2, "jockey": "E. Esquivel", "trainer": "W. D. Cowans", "weight": 120, "ml": 2.5, "eq": "", "med": "Lasix"},
+                {"name": "Love Knicks Hart", "post": 3, "jockey": "A. Beschizza", "trainer": "J. Ennis", "weight": 120, "ml": 4.0, "eq": "", "med": "Lasix"},
+                {"name": "French Mistress", "post": 4, "jockey": "F. Geroux", "trainer": "B. Cox", "weight": 120, "ml": 3.5, "eq": "", "med": "Lasix"},
+                {"name": "Lunar Buzz", "post": 5, "jockey": "T. Gaffalione", "trainer": "M. Casse", "weight": 120, "ml": 5.0, "eq": "", "med": "Lasix"},
+                {"name": "Tesouro de Pirata", "post": 6, "jockey": "F. Prat", "trainer": "C. Brown", "weight": 120, "ml": 3.0, "eq": "Blinkers ON", "med": "Lasix"},
+                {"name": "Bamtwentyklater", "post": 7, "jockey": "J. L. Ortiz", "trainer": "W. Mott", "weight": 120, "ml": 8.0, "eq": "", "med": "Lasix"}
             ]
         },
         {
-            "race_number": 5, "distance": 7.0, "surface": "D", "cond": "FT", "class": "CLM $32k", "purse": 52000, "rail": 0,
+            "race_number": 5, "distance": 8.0, "surface": "T", "cond": "FM", "class": "ALW $120k", "purse": 120000, "rail": 10,
             "entries": [
-                {"name": "Copper Moon", "post": 1, "jockey": "E. Morales", "trainer": "T. Drury", "weight": 121, "ml": 4.0, "eq": "", "med": "Lasix"},
-                {"name": "Big Switch", "post": 2, "jockey": "A. Beschizza", "trainer": "J. Sisterson", "weight": 121, "ml": 6.0, "eq": "", "med": "Lasix"},
-                {"name": "Desert Storm", "post": 3, "jockey": "J. A. Torres", "trainer": "R. Moquett", "weight": 121, "ml": 3.0, "eq": "", "med": "Lasix"},
-                {"name": "High Voltage", "post": 4, "jockey": "C. Lanerie", "trainer": "K. McPeek", "weight": 121, "ml": 5.0, "eq": "", "med": "Lasix"},
-                {"name": "Stormy Wave", "post": 5, "jockey": "F. Arrieta", "trainer": "I. Wilkes", "weight": 121, "ml": 8.0, "eq": "", "med": "Lasix"},
-                {"name": "Iron Forge", "post": 6, "jockey": "G. Corrales", "trainer": "E. Kenneally", "weight": 121, "ml": 10.0, "eq": "Blinkers OFF", "med": "Lasix"}
+                {"name": "Shure", "post": 1, "jockey": "J. L. Ortiz", "trainer": "B. Walsh", "weight": 120, "ml": 8.0, "eq": "", "med": "Lasix"},
+                {"name": "Ramblin", "post": 2, "jockey": "R. Bejarano", "trainer": "D. Romans", "weight": 120, "ml": 10.0, "eq": "", "med": "Lasix"},
+                {"name": "Free Advice", "post": 3, "jockey": "B. Hernandez Jr.", "trainer": "K. McPeek", "weight": 120, "ml": 6.0, "eq": "", "med": "Lasix"},
+                {"name": "Unitas", "post": 4, "jockey": "F. Geroux", "trainer": "M. Maker", "weight": 120, "ml": 5.0, "eq": "", "med": "Lasix"},
+                {"name": "City of Oscars", "post": 5, "jockey": "T. Gaffalione", "trainer": "K. McPeek", "weight": 120, "ml": 4.0, "eq": "", "med": "Lasix"},
+                {"name": "Password", "post": 6, "jockey": "A. Achard", "trainer": "J. Ennis", "weight": 120, "ml": 3.0, "eq": "", "med": "Lasix"},
+                {"name": "Taterpie", "post": 7, "jockey": "E. Morales", "trainer": "G. Foley", "weight": 120, "ml": 4.0, "eq": "", "med": "Lasix"},
+                {"name": "Winery", "post": 8, "jockey": "S. Pauly", "trainer": "K. Kaufeld", "weight": 120, "ml": 2.5, "eq": "Blinkers ON", "med": "Lasix"}
             ]
         },
         {
-            "race_number": 6, "distance": 8.0, "surface": "T", "cond": "FM", "class": "ALW $110k", "purse": 110000, "rail": 10,
+            "race_number": 6, "distance": 6.5, "surface": "D", "cond": "FT", "class": "MSW (2yo)", "purse": 110000, "rail": 0,
             "entries": [
-                {"name": "Highland Grace", "post": 1, "jockey": "F. Prat", "trainer": "C. Clement", "weight": 122, "ml": 2.5, "eq": "", "med": "Lasix"},
-                {"name": "Sweet Melody", "post": 2, "jockey": "L. Saez", "trainer": "B. Cox", "weight": 122, "ml": 3.5, "eq": "", "med": "Lasix"},
-                {"name": "Emerald Isle", "post": 3, "jockey": "T. Gaffalione", "trainer": "M. Casse", "weight": 122, "ml": 4.5, "eq": "", "med": "Lasix"},
-                {"name": "Prairie Rose", "post": 4, "jockey": "J. Rosario", "trainer": "C. Brown", "weight": 122, "ml": 6.0, "eq": "", "med": "Lasix"},
-                {"name": "Whispering Willow", "post": 5, "jockey": "J. L. Ortiz", "trainer": "G. Motion", "weight": 122, "ml": 8.0, "eq": "", "med": "Lasix"},
-                {"name": "Velvet Horizon", "post": 6, "jockey": "B. Hernandez Jr.", "trainer": "K. McPeek", "weight": 122, "ml": 15.0, "eq": "", "med": "Lasix"}
+                {"name": "Kashville", "post": 1, "jockey": "J. Torres", "trainer": "W. B. Calhoun", "weight": 119, "ml": 4.0, "eq": "", "med": "Lasix"},
+                {"name": "Fleetfoot Mac", "post": 2, "jockey": "E. Esquivel", "trainer": "K. McPeek", "weight": 119, "ml": 5.0, "eq": "", "med": "Lasix"},
+                {"name": "Acuff", "post": 3, "jockey": "Y. Hazlewood", "trainer": "R. Moquett", "weight": 119, "ml": 8.0, "eq": "", "med": "Lasix"},
+                {"name": "Supreme Commander", "post": 4, "jockey": "T. Gaffalione", "trainer": "B. Walsh", "weight": 119, "ml": 3.5, "eq": "", "med": "Lasix"},
+                {"name": "Champagne Coast", "post": 5, "jockey": "A. Concepcion", "trainer": "R. Mott", "weight": 119, "ml": 6.0, "eq": "", "med": "Lasix"},
+                {"name": "Bob", "post": 6, "jockey": "C. Torres", "trainer": "R. Brisset", "weight": 119, "ml": 5.0, "eq": "", "med": "Lasix"},
+                {"name": "The Last Campaign", "post": 7, "jockey": "L. Machado", "trainer": "A. Navarrete", "weight": 119, "ml": 12.0, "eq": "", "med": "Lasix"},
+                {"name": "Intermediation", "post": 8, "jockey": "K. J. Asmussen", "trainer": "S. Asmussen", "weight": 119, "ml": 6.0, "eq": "", "med": "Lasix"},
+                {"name": "Steve Wood", "post": 9, "jockey": "M. Fernandez", "trainer": "D. Von Hemel", "weight": 119, "ml": 10.0, "eq": "", "med": "Lasix"},
+                {"name": "Hillbilly Kobe", "post": 10, "jockey": "J. Ortiz", "trainer": "M. Casse", "weight": 119, "ml": 4.5, "eq": "", "med": "Lasix"},
+                {"name": "Invasion", "post": 11, "jockey": "I. Ortiz Jr.", "trainer": "B. Cox", "weight": 119, "ml": 2.5, "eq": "Blinkers ON", "med": "Lasix"}
             ]
         },
         {
-            "race_number": 7, "distance": 8.5, "surface": "D", "cond": "FT", "class": "MSW", "purse": 100000, "rail": 0,
+            "race_number": 7, "distance": 7.0, "surface": "D", "cond": "FT", "class": "AOC $130k", "purse": 130000, "rail": 0,
             "entries": [
-                {"name": "Commanding General", "post": 1, "jockey": "F. Prat", "trainer": "B. Baffert", "weight": 119, "ml": 2.0, "eq": "", "med": "Lasix"},
-                {"name": "Noble Warrior", "post": 2, "jockey": "F. Geroux", "trainer": "B. Cox", "weight": 119, "ml": 3.5, "eq": "", "med": "Lasix"},
-                {"name": "Keen Spirit", "post": 3, "jockey": "T. Gaffalione", "trainer": "S. Asmussen", "weight": 119, "ml": 5.0, "eq": "Blinkers ON", "med": "Lasix"},
-                {"name": "Bluegrass Pride", "post": 4, "jockey": "L. Saez", "trainer": "T. Pletcher", "weight": 119, "ml": 6.0, "eq": "", "med": "Lasix"},
-                {"name": "Dark Knight", "post": 5, "jockey": "B. Hernandez Jr.", "trainer": "K. McPeek", "weight": 119, "ml": 10.0, "eq": "", "med": "Lasix"},
-                {"name": "River Echo", "post": 6, "jockey": "J. L. Ortiz", "trainer": "B. Walsh", "weight": 119, "ml": 12.0, "eq": "", "med": "Lasix"}
+                {"name": "Overcome Adversity", "post": 1, "jockey": "L. Machado", "trainer": "M. A. Shirer", "weight": 122, "ml": 4.0, "eq": "", "med": "Lasix"},
+                {"name": "Landed", "post": 2, "jockey": "J. Velazquez", "trainer": "W. Ward", "weight": 122, "ml": 3.5, "eq": "", "med": "Lasix"},
+                {"name": "Modo", "post": 3, "jockey": "L. Saez", "trainer": "K. LaRose", "weight": 122, "ml": 2.5, "eq": "Blinkers ON", "med": "Lasix"},
+                {"name": "Golden Hour", "post": 4, "jockey": "T. Gaffalione", "trainer": "B. Walsh", "weight": 122, "ml": 5.0, "eq": "", "med": "Lasix"},
+                {"name": "Secret Whisper", "post": 5, "jockey": "F. Geroux", "trainer": "B. Cox", "weight": 122, "ml": 6.0, "eq": "", "med": "Lasix"},
+                {"name": "Prairie Wind", "post": 6, "jockey": "B. Hernandez Jr.", "trainer": "K. McPeek", "weight": 122, "ml": 8.0, "eq": "", "med": "Lasix"},
+                {"name": "Star of Hope", "post": 7, "jockey": "F. Prat", "trainer": "C. Brown", "weight": 122, "ml": 4.5, "eq": "", "med": "Lasix"},
+                {"name": "Midnight Run", "post": 8, "jockey": "J. L. Ortiz", "trainer": "W. Mott", "weight": 122, "ml": 10.0, "eq": "", "med": "Lasix"},
+                {"name": "High Roller", "post": 9, "jockey": "C. Torres", "trainer": "R. Brisset", "weight": 122, "ml": 12.0, "eq": "", "med": "Lasix"}
             ]
         },
         {
@@ -118,18 +135,24 @@ REAL_CARDS_OCT_11 = {
                 {"name": "Shoot It True", "post": 5, "jockey": "Y. Hazlewood", "trainer": "W. Ward", "weight": 118, "ml": 4.5, "eq": "Blinkers ON", "med": "Lasix"},
                 {"name": "Kehoe Beach", "post": 6, "jockey": "J. L. Ortiz", "trainer": "W. Ward", "weight": 120, "ml": 5.0, "eq": "", "med": "Lasix"},
                 {"name": "Ag Bullet", "post": 7, "jockey": "J. Velazquez", "trainer": "R. Baltas", "weight": 124, "ml": 2.0, "eq": "", "med": "Lasix"},
-                {"name": "Movin' On Up", "post": 8, "jockey": "J. Ramos", "trainer": "G. Colebrook", "weight": 120, "ml": 20.0, "eq": "", "med": "Lasix"}
+                {"name": "Movin' On Up", "post": 8, "jockey": "J. Ramos", "trainer": "S. Joseph Jr.", "weight": 120, "ml": 20.0, "eq": "", "med": "Lasix"}
             ]
         },
         {
-            "race_number": 9, "distance": 8.5, "surface": "T", "cond": "FM", "class": "ALW $110k", "purse": 110000, "rail": 10,
+            "race_number": 9, "distance": 6.0, "surface": "D", "cond": "FT", "class": "MSW", "purse": 100000, "rail": 0,
             "entries": [
-                {"name": "St. John's", "post": 1, "jockey": "J. Rosario", "trainer": "C. Clement", "weight": 121, "ml": 3.0, "eq": "", "med": "Lasix"},
-                {"name": "Southern Breeze", "post": 2, "jockey": "F. Prat", "trainer": "C. Brown", "weight": 121, "ml": 2.5, "eq": "", "med": "Lasix"},
-                {"name": "High Plains", "post": 3, "jockey": "T. Gaffalione", "trainer": "M. Maker", "weight": 121, "ml": 4.5, "eq": "", "med": "Lasix"},
-                {"name": "Golden Touch", "post": 4, "jockey": "L. Saez", "trainer": "T. Pletcher", "weight": 121, "ml": 6.0, "eq": "", "med": "Lasix"},
-                {"name": "Mystic Realm", "post": 5, "jockey": "F. Geroux", "trainer": "B. Cox", "weight": 121, "ml": 8.0, "eq": "", "med": "Lasix"},
-                {"name": "Silver Crest", "post": 6, "jockey": "J. L. Ortiz", "trainer": "B. Walsh", "weight": 121, "ml": 12.0, "eq": "", "med": "Lasix"}
+                {"name": "Eleos", "post": 1, "jockey": "J. A. Torres", "trainer": "C. Munoz", "weight": 119, "ml": 6.0, "eq": "", "med": "Lasix"},
+                {"name": "Merry An", "post": 2, "jockey": "O. Bocachica", "trainer": "W. N. Howard", "weight": 119, "ml": 8.0, "eq": "", "med": "Lasix"},
+                {"name": "Colossus", "post": 3, "jockey": "T. Gaffalione", "trainer": "B. Walsh", "weight": 119, "ml": 3.0, "eq": "Blinkers ON", "med": "Lasix"},
+                {"name": "Jozempic", "post": 4, "jockey": "L. Saez", "trainer": "E. Kenneally", "weight": 119, "ml": 4.0, "eq": "", "med": "Lasix"},
+                {"name": "Turnback", "post": 5, "jockey": "E. Morales", "trainer": "J. K. Sweezey", "weight": 119, "ml": 6.0, "eq": "", "med": "Lasix"},
+                {"name": "Emilio", "post": 6, "jockey": "I. Ortiz Jr.", "trainer": "B. Cox", "weight": 119, "ml": 2.5, "eq": "", "med": "Lasix"},
+                {"name": "Tilt A Twirl", "post": 7, "jockey": "V. R. Carrasco", "trainer": "G. R. Arnold II", "weight": 119, "ml": 8.0, "eq": "", "med": "Lasix"},
+                {"name": "Newton", "post": 8, "jockey": "F. Geroux", "trainer": "M. Casse", "weight": 119, "ml": 5.0, "eq": "", "med": "Lasix"},
+                {"name": "Good Company", "post": 9, "jockey": "F. Prat", "trainer": "C. Brown", "weight": 119, "ml": 4.5, "eq": "", "med": "Lasix"},
+                {"name": "Justice", "post": 10, "jockey": "J. L. Ortiz", "trainer": "W. Mott", "weight": 119, "ml": 10.0, "eq": "", "med": "Lasix"},
+                {"name": "We Be Mischief", "post": 11, "jockey": "C. Torres", "trainer": "R. Brisset", "weight": 119, "ml": 12.0, "eq": "", "med": "Lasix"},
+                {"name": "Leading Off", "post": 12, "jockey": "B. Hernandez Jr.", "trainer": "K. McPeek", "weight": 119, "ml": 15.0, "eq": "", "med": "Lasix"}
             ]
         }
     ],
@@ -141,8 +164,8 @@ REAL_CARDS_OCT_11 = {
         {
             "race_number": 1, "distance": 8.5, "surface": "T", "cond": "FM", "class": "MSW", "purse": 100000, "rail": 12,
             "entries": [
-                {"name": "On Time Delivery", "post": 1, "jockey": "S. Marin", "trainer": "H. G. Motion", "weight": 119, "ml": 3.5, "eq": "", "med": "Lasix"},
-                {"name": "Legal Squeeze", "post": 2, "jockey": "K. Carmouche", "trainer": "L. Rice", "weight": 119, "ml": 3.0, "eq": "", "med": "Lasix"},
+                {"name": "On Time Delivery", "post": 1, "jockey": "S. Marin", "trainer": "H. G. Motion", "weight": 119, "ml": 3.0, "eq": "", "med": "Lasix"},
+                {"name": "Legal Squeeze", "post": 2, "jockey": "K. Davis", "trainer": "B. Tagg", "weight": 119, "ml": 3.5, "eq": "", "med": "Lasix"},
                 {"name": "Runyon Canyon", "post": 3, "jockey": "M. Franco", "trainer": "C. Brown", "weight": 119, "ml": 2.5, "eq": "Blinkers ON", "med": "Lasix"},
                 {"name": "Candidly", "post": 4, "jockey": "D. Davis", "trainer": "C. Clement", "weight": 119, "ml": 5.0, "eq": "", "med": "Lasix"},
                 {"name": "Majestic Moonlight", "post": 5, "jockey": "E. Cancel", "trainer": "G. Weaver", "weight": 119, "ml": 8.0, "eq": "", "med": "Lasix"},
@@ -153,88 +176,99 @@ REAL_CARDS_OCT_11 = {
             "race_number": 2, "distance": 6.5, "surface": "D", "cond": "FT", "class": "MSW", "purse": 100000, "rail": 0,
             "entries": [
                 {"name": "Fantasy Road", "post": 1, "jockey": "S. Marin", "trainer": "J. F. D'Angelo", "weight": 123, "ml": 3.5, "eq": "", "med": "Lasix"},
-                {"name": "Bella Corredora", "post": 2, "jockey": "M. Franco", "trainer": "C. Brown", "weight": 123, "ml": 2.5, "eq": "", "med": "Lasix"},
-                {"name": "Salty Gal", "post": 3, "jockey": "K. Carmouche", "trainer": "T. Pletcher", "weight": 123, "ml": 4.0, "eq": "Blinkers ON", "med": "Lasix"},
-                {"name": "Quality Charm", "post": 4, "jockey": "D. Davis", "trainer": "B. Cox", "weight": 123, "ml": 5.0, "eq": "", "med": "Lasix"},
-                {"name": "Lady Liberty", "post": 5, "jockey": "E. Cancel", "trainer": "L. Rice", "weight": 123, "ml": 8.0, "eq": "", "med": "Lasix"},
-                {"name": "Starlet Fire", "post": 6, "jockey": "R. Silvera", "trainer": "R. Falcone Jr.", "weight": 123, "ml": 15.0, "eq": "", "med": "Lasix"}
+                {"name": "Fairy Tale", "post": 2, "jockey": "K. Carmouche", "trainer": "L. Rice", "weight": 123, "ml": 3.0, "eq": "", "med": "Lasix"},
+                {"name": "Ethereal Quality", "post": 3, "jockey": "A. Fresu", "trainer": "C. Brown", "weight": 123, "ml": 2.5, "eq": "Blinkers ON", "med": "Lasix"},
+                {"name": "Asset Light", "post": 4, "jockey": "R. Santana Jr.", "trainer": "T. Pletcher", "weight": 123, "ml": 4.0, "eq": "", "med": "Lasix"},
+                {"name": "Turn N Burn", "post": 5, "jockey": "M. Franco", "trainer": "B. Cox", "weight": 123, "ml": 5.0, "eq": "", "med": "Lasix"}
             ]
         },
         {
-            "race_number": 3, "distance": 6.0, "surface": "D", "cond": "FT", "class": "CLM $28k", "purse": 45000, "rail": 0,
+            "race_number": 3, "distance": 6.0, "surface": "D", "cond": "FT", "class": "MSW", "purse": 100000, "rail": 0,
             "entries": [
-                {"name": "Joker Boy", "post": 1, "jockey": "D. Davis", "trainer": "L. Rice", "weight": 122, "ml": 2.5, "eq": "", "med": "Lasix"},
-                {"name": "Quick Return", "post": 2, "jockey": "K. Carmouche", "trainer": "D. Jacobson", "weight": 122, "ml": 3.5, "eq": "", "med": "Lasix"},
-                {"name": "Bustin Shout", "post": 3, "jockey": "M. Franco", "trainer": "R. Handal", "weight": 122, "ml": 4.5, "eq": "", "med": "Lasix"},
-                {"name": "King Angelo", "post": 4, "jockey": "S. Marin", "trainer": "J. Ferraro", "weight": 122, "ml": 6.0, "eq": "", "med": "Lasix"},
-                {"name": "Market Alert", "post": 5, "jockey": "E. Cancel", "trainer": "J. Englehart", "weight": 122, "ml": 8.0, "eq": "", "med": "Lasix"},
-                {"name": "Bourbon's Hope", "post": 6, "jockey": "R. Silvera", "trainer": "E. Barker", "weight": 122, "ml": 12.0, "eq": "", "med": "Lasix"}
+                {"name": "Galicat", "post": 1, "jockey": "K. Carmouche", "trainer": "J. C. Englehart", "weight": 122, "ml": 4.0, "eq": "", "med": "Lasix"},
+                {"name": "Karsten", "post": 2, "jockey": "E. J. Zayas", "trainer": "J. R. Abreu", "weight": 122, "ml": 3.0, "eq": "", "med": "Lasix"},
+                {"name": "Just Tipsy", "post": 3, "jockey": "J. Castellano", "trainer": "J. M. Antonucci", "weight": 122, "ml": 8.0, "eq": "", "med": "Lasix"},
+                {"name": "Tap Rules", "post": 4, "jockey": "M. Franco", "trainer": "M. Clement", "weight": 122, "ml": 2.0, "eq": "Blinkers ON", "med": "Lasix"},
+                {"name": "Hurricane Kaz", "post": 5, "jockey": "L. R. Rivera Jr.", "trainer": "D. K. Synnefias", "weight": 122, "ml": 10.0, "eq": "", "med": "Lasix"},
+                {"name": "Valentine Crusader", "post": 6, "jockey": "A. Fresu", "trainer": "A. J. Green", "weight": 122, "ml": 2.5, "eq": "", "med": "Lasix"}
             ]
         },
         {
-            "race_number": 4, "distance": 6.0, "surface": "T", "cond": "FM", "class": "AOC $102k", "purse": 102000, "rail": 12,
+            "race_number": 4, "distance": 11.0, "surface": "T", "cond": "FM", "class": "AOC $105k", "purse": 105000, "rail": 12,
             "entries": [
-                {"name": "Sheriff Bianco", "post": 1, "jockey": "M. Franco", "trainer": "L. Rice", "weight": 122, "ml": 3.0, "eq": "", "med": "Lasix"},
-                {"name": "Disarmed", "post": 2, "jockey": "D. Davis", "trainer": "M. Maker", "weight": 122, "ml": 2.5, "eq": "", "med": "Lasix"},
-                {"name": "Thin White Duke", "post": 3, "jockey": "K. Carmouche", "trainer": "D. G. Donk", "weight": 122, "ml": 4.0, "eq": "", "med": "Lasix"},
-                {"name": "Run Curtis Run", "post": 4, "jockey": "S. Marin", "trainer": "M. Maker", "weight": 122, "ml": 6.0, "eq": "Blinkers ON", "med": "Lasix"},
-                {"name": "Kool Kat", "post": 5, "jockey": "E. Cancel", "trainer": "G. Weaver", "weight": 122, "ml": 10.0, "eq": "", "med": "Lasix"},
-                {"name": "Factually Correct", "post": 6, "jockey": "R. Silvera", "trainer": "R. Falcone Jr.", "weight": 122, "ml": 12.0, "eq": "", "med": "Lasix"}
+                {"name": "Consensus View", "post": 1, "jockey": "R. Santana Jr.", "trainer": "C. Brown", "weight": 122, "ml": 2.5, "eq": "", "med": "Lasix"},
+                {"name": "Alibi", "post": 2, "jockey": "D. Davis", "trainer": "C. Brown", "weight": 122, "ml": 3.0, "eq": "", "med": "Lasix"},
+                {"name": "Y'allreadyforthis", "post": 3, "jockey": "D. Rivera", "trainer": "A. Arriaga", "weight": 122, "ml": 12.0, "eq": "", "med": "Lasix"},
+                {"name": "Lisa Joy", "post": 4, "jockey": "A. Fresu", "trainer": "C. McGaughey", "weight": 122, "ml": 4.0, "eq": "", "med": "Lasix"},
+                {"name": "Dividend Recap", "post": 5, "jockey": "M. Franco", "trainer": "M. Clement", "weight": 122, "ml": 5.0, "eq": "", "med": "Lasix"},
+                {"name": "Baby Sassicaia", "post": 6, "jockey": "H. Harkie", "trainer": "N. Follett", "weight": 122, "ml": 15.0, "eq": "", "med": "Lasix"},
+                {"name": "Kiamba", "post": 7, "jockey": "S. Marin", "trainer": "M. Clement", "weight": 122, "ml": 6.0, "eq": "Blinkers ON", "med": "Lasix"}
             ]
         },
         {
-            "race_number": 5, "distance": 8.0, "surface": "D", "cond": "FT", "class": "MCL $40k", "purse": 47000, "rail": 0,
+            "race_number": 5, "distance": 6.0, "surface": "D", "cond": "FT", "class": "MSW", "purse": 100000, "rail": 0,
             "entries": [
-                {"name": "Uncle George", "post": 1, "jockey": "M. Franco", "trainer": "T. Pletcher", "weight": 120, "ml": 2.5, "eq": "", "med": "Lasix"},
-                {"name": "Empire State", "post": 2, "jockey": "K. Carmouche", "trainer": "B. Cox", "weight": 120, "ml": 3.5, "eq": "", "med": "Lasix"},
-                {"name": "Big Apple Boy", "post": 3, "jockey": "D. Davis", "trainer": "C. Brown", "weight": 120, "ml": 4.0, "eq": "", "med": "Lasix"},
-                {"name": "Hudson River", "post": 4, "jockey": "S. Marin", "trainer": "L. Rice", "weight": 120, "ml": 6.0, "eq": "Blinkers ON", "med": "Lasix"},
-                {"name": "Broadway Express", "post": 5, "jockey": "E. Cancel", "trainer": "R. Rodriguez", "weight": 120, "ml": 8.0, "eq": "", "med": "Lasix"},
-                {"name": "Gotham Star", "post": 6, "jockey": "R. Silvera", "trainer": "G. Sciacca", "weight": 120, "ml": 15.0, "eq": "", "med": "Lasix"}
+                {"name": "Cornichiwa", "post": 1, "jockey": "M. Franco", "trainer": "C. Brown", "weight": 120, "ml": 2.5, "eq": "", "med": "Lasix"},
+                {"name": "Rockabye", "post": 2, "jockey": "A. Fresu", "trainer": "M. Clement", "weight": 120, "ml": 3.5, "eq": "", "med": "Lasix"},
+                {"name": "Shook Up The World", "post": 3, "jockey": "R. Gutierrez", "trainer": "T. Morley", "weight": 120, "ml": 6.0, "eq": "", "med": "Lasix"},
+                {"name": "Golden Ember", "post": 4, "jockey": "J. Lezcano", "trainer": "W. Mott", "weight": 120, "ml": 4.0, "eq": "", "med": "Lasix"},
+                {"name": "Kershaw Folly", "post": 5, "jockey": "E. Zayas", "trainer": "P. Antonacci", "weight": 120, "ml": 8.0, "eq": "", "med": "Lasix"},
+                {"name": "Call Me", "post": 6, "jockey": "R. Silvera", "trainer": "R. Rodriguez", "weight": 120, "ml": 10.0, "eq": "", "med": "Lasix"},
+                {"name": "Zomoroda", "post": 7, "jockey": "S. Marin", "trainer": "B. Cox", "weight": 120, "ml": 5.0, "eq": "", "med": "Lasix"},
+                {"name": "Breaker", "post": 8, "jockey": "K. Carmouche", "trainer": "T. Pletcher", "weight": 120, "ml": 3.0, "eq": "Blinkers ON", "med": "Lasix"}
             ]
         },
         {
-            "race_number": 6, "distance": 8.5, "surface": "T", "cond": "FM", "class": "ALW $100k", "purse": 100000, "rail": 12,
+            "race_number": 6, "distance": 7.0, "surface": "D", "cond": "FT", "class": "CLM $28k", "purse": 45000, "rail": 0,
             "entries": [
-                {"name": "Spirit of St Louis", "post": 1, "jockey": "M. Franco", "trainer": "C. Brown", "weight": 124, "ml": 2.0, "eq": "", "med": "Lasix"},
-                {"name": "Dakota Gold", "post": 2, "jockey": "D. Davis", "trainer": "D. Gargan", "weight": 124, "ml": 3.5, "eq": "", "med": "Lasix"},
-                {"name": "Itsallcomintogetha", "post": 3, "jockey": "K. Carmouche", "trainer": "P. Serpe", "weight": 122, "ml": 5.0, "eq": "", "med": "Lasix"},
-                {"name": "City Man", "post": 4, "jockey": "S. Marin", "trainer": "C. Clement", "weight": 124, "ml": 4.0, "eq": "", "med": "Lasix"},
-                {"name": "Jerry the Nipper", "post": 5, "jockey": "E. Cancel", "trainer": "T. Pletcher", "weight": 122, "ml": 8.0, "eq": "", "med": "Lasix"},
-                {"name": "Somelikeithotbrown", "post": 6, "jockey": "R. Silvera", "trainer": "M. Maker", "weight": 122, "ml": 10.0, "eq": "", "med": "Lasix"}
+                {"name": "Mo Spice", "post": 1, "jockey": "R. Silvera", "trainer": "R. Rodriguez", "weight": 122, "ml": 4.0, "eq": "", "med": "Lasix"},
+                {"name": "Escape Hall", "post": 2, "jockey": "J. Lezcano", "trainer": "L. Rice", "weight": 122, "ml": 3.0, "eq": "", "med": "Lasix"},
+                {"name": "Hot Property", "post": 3, "jockey": "M. Franco", "trainer": "L. Rice", "weight": 122, "ml": 2.5, "eq": "Blinkers ON", "med": "Lasix"},
+                {"name": "E Z Bourbon", "post": 4, "jockey": "R. Gutierrez", "trainer": "M. Hennig", "weight": 122, "ml": 5.0, "eq": "", "med": "Lasix"},
+                {"name": "Waitin'onasunnyday", "post": 5, "jockey": "P. Pena", "trainer": "W. Potts", "weight": 122, "ml": 8.0, "eq": "", "med": "Lasix"},
+                {"name": "Mike's Magic", "post": 6, "jockey": "S. Gonzalez", "trainer": "M. Kantarmaci", "weight": 122, "ml": 10.0, "eq": "", "med": "Lasix"},
+                {"name": "Bakuto", "post": 7, "jockey": "S. Marin", "trainer": "H. De", "weight": 122, "ml": 6.0, "eq": "", "med": "Lasix"},
+                {"name": "Copper Tax", "post": 8, "jockey": "D. Davis", "trainer": "G. Capuano", "weight": 122, "ml": 3.5, "eq": "", "med": "Lasix"}
             ]
         },
         {
-            "race_number": 7, "distance": 6.0, "surface": "D", "cond": "FT", "class": "AOC $105k", "purse": 105000, "rail": 0,
+            "race_number": 7, "distance": 6.0, "surface": "D", "cond": "FT", "class": "Starter ALW", "purse": 65000, "rail": 0,
             "entries": [
-                {"name": "Today's Flavor", "post": 1, "jockey": "M. Franco", "trainer": "D. Jacobson", "weight": 124, "ml": 2.5, "eq": "", "med": "Lasix"},
-                {"name": "Rotknee", "post": 2, "jockey": "K. Carmouche", "trainer": "M. Maker", "weight": 124, "ml": 3.0, "eq": "", "med": "Lasix"},
-                {"name": "Looms Boldly", "post": 3, "jockey": "D. Davis", "trainer": "B. Cox", "weight": 122, "ml": 4.5, "eq": "", "med": "Lasix"},
-                {"name": "Twenty Four Mamba", "post": 4, "jockey": "S. Marin", "trainer": "C. Baker", "weight": 122, "ml": 6.0, "eq": "", "med": "Lasix"},
-                {"name": "Awesome Native", "post": 5, "jockey": "E. Cancel", "trainer": "J. Englehart", "weight": 122, "ml": 8.0, "eq": "Blinkers ON", "med": "Lasix"},
-                {"name": "Big Engine", "post": 6, "jockey": "R. Silvera", "trainer": "R. Falcone Jr.", "weight": 122, "ml": 12.0, "eq": "", "med": "Lasix"}
+                {"name": "Our Preferred Pal", "post": 1, "jockey": "R. Silvera", "trainer": "C. Englehart", "weight": 122, "ml": 3.5, "eq": "", "med": "Lasix"},
+                {"name": "Credit Risk", "post": 2, "jockey": "R. Santana Jr.", "trainer": "L. Bartkowski", "weight": 122, "ml": 4.0, "eq": "", "med": "Lasix"},
+                {"name": "Ishkabibble", "post": 3, "jockey": "D. Davis", "trainer": "E. Ibrahim", "weight": 122, "ml": 5.0, "eq": "", "med": "Lasix"},
+                {"name": "Mobelladream", "post": 4, "jockey": "C. Elliott", "trainer": "M. Giddings", "weight": 122, "ml": 6.0, "eq": "", "med": "Lasix"},
+                {"name": "Babcie", "post": 5, "jockey": "C. Hargrove", "trainer": "R. Handal", "weight": 122, "ml": 8.0, "eq": "", "med": "Lasix"},
+                {"name": "Clap Back", "post": 6, "jockey": "J. Lezcano", "trainer": "C. Baker", "weight": 122, "ml": 3.0, "eq": "", "med": "Lasix"},
+                {"name": "Spun Size", "post": 7, "jockey": "D. Rivera", "trainer": "C. Baker", "weight": 122, "ml": 10.0, "eq": "", "med": "Lasix", "scratched": 1},
+                {"name": "Twirling Lulu", "post": 8, "jockey": "K. Carmouche", "trainer": "B. N. Levine", "weight": 122, "ml": 2.5, "eq": "Blinkers ON", "med": "Lasix"}
             ]
         },
         {
-            "race_number": 8, "distance": 6.0, "surface": "T", "cond": "FM", "class": "Carle Place Stakes", "purse": 150000, "rail": 12,
+            "race_number": 8, "distance": 8.0, "surface": "T", "cond": "FM", "class": "CLM $40k", "purse": 55000, "rail": 12,
             "entries": [
-                {"name": "Please Advise", "post": 1, "jockey": "D. Davis", "trainer": "G. Weaver", "weight": 122, "ml": 3.0, "eq": "", "med": "Lasix"},
-                {"name": "Works for Me", "post": 2, "jockey": "M. Franco", "trainer": "J. Lee", "weight": 122, "ml": 3.5, "eq": "", "med": "Lasix"},
-                {"name": "Mansetti", "post": 3, "jockey": "K. Carmouche", "trainer": "M. Maker", "weight": 120, "ml": 4.0, "eq": "", "med": "Lasix"},
-                {"name": "Split Strike", "post": 4, "jockey": "S. Marin", "trainer": "C. Clement", "weight": 120, "ml": 5.0, "eq": "", "med": "Lasix"},
-                {"name": "Apollo Ten", "post": 5, "jockey": "E. Cancel", "trainer": "C. Clement", "weight": 120, "ml": 6.0, "eq": "Blinkers ON", "med": "Lasix"},
-                {"name": "El Terreno", "post": 6, "jockey": "R. Silvera", "trainer": "M. Nevin", "weight": 120, "ml": 10.0, "eq": "", "med": "Lasix"}
+                {"name": "Razorcat", "post": 1, "jockey": "M. Franco", "trainer": "L. Rice", "weight": 122, "ml": 3.0, "eq": "", "med": "Lasix"},
+                {"name": "Sicilian Defense", "post": 2, "jockey": "D. Davis", "trainer": "M. Maker", "weight": 122, "ml": 3.5, "eq": "", "med": "Lasix"},
+                {"name": "Noble One", "post": 3, "jockey": "K. Carmouche", "trainer": "B. Cox", "weight": 122, "ml": 2.5, "eq": "Blinkers ON", "med": "Lasix"},
+                {"name": "Three Thirteen", "post": 4, "jockey": "R. Santana Jr.", "trainer": "C. Brown", "weight": 122, "ml": 4.0, "eq": "", "med": "Lasix"},
+                {"name": "Mozambique", "post": 5, "jockey": "A. Fresu", "trainer": "M. Clement", "weight": 122, "ml": 5.0, "eq": "", "med": "Lasix"},
+                {"name": "Kuhner", "post": 6, "jockey": "J. Lezcano", "trainer": "R. Rodriguez", "weight": 122, "ml": 8.0, "eq": "", "med": "Lasix"},
+                {"name": "Sharons Pharoah", "post": 7, "jockey": "S. Marin", "trainer": "J. D'Angelo", "weight": 122, "ml": 10.0, "eq": "", "med": "Lasix"},
+                {"name": "Lord Chatham", "post": 8, "jockey": "E. Zayas", "trainer": "T. Pletcher", "weight": 122, "ml": 6.0, "eq": "", "med": "Lasix"},
+                {"name": "Printer's Alley", "post": 9, "jockey": "R. Silvera", "trainer": "R. Falcone Jr.", "weight": 122, "ml": 12.0, "eq": "", "med": "Lasix"}
             ]
         },
         {
-            "race_number": 9, "distance": 8.5, "surface": "T", "cond": "FM", "class": "MSW", "purse": 90000, "rail": 12,
+            "race_number": 9, "distance": 6.0, "surface": "D", "cond": "FT", "class": "MCL $40k", "purse": 47000, "rail": 0,
             "entries": [
-                {"name": "St. Benedict", "post": 1, "jockey": "M. Franco", "trainer": "C. Brown", "weight": 119, "ml": 2.5, "eq": "", "med": "Lasix"},
-                {"name": "Sea Cruiser", "post": 2, "jockey": "D. Davis", "trainer": "C. Clement", "weight": 119, "ml": 3.5, "eq": "", "med": "Lasix"},
-                {"name": "Silver Storm", "post": 3, "jockey": "K. Carmouche", "trainer": "T. Pletcher", "weight": 119, "ml": 4.5, "eq": "", "med": "Lasix"},
-                {"name": "Noble Heart", "post": 4, "jockey": "S. Marin", "trainer": "W. Mott", "weight": 119, "ml": 6.0, "eq": "Blinkers ON", "med": "Lasix"},
-                {"name": "Royal Knight", "post": 5, "jockey": "E. Cancel", "trainer": "G. Motion", "weight": 119, "ml": 8.0, "eq": "", "med": "Lasix"},
-                {"name": "Harbor Patrol", "post": 6, "jockey": "R. Silvera", "trainer": "M. Maker", "weight": 119, "ml": 12.0, "eq": "", "med": "Lasix"}
+                {"name": "Klimt Master", "post": 1, "jockey": "F. P. Villa", "trainer": "E. Jones", "weight": 120, "ml": 10.0, "eq": "", "med": "Lasix"},
+                {"name": "Perretti", "post": 2, "jockey": "R. Santana Jr.", "trainer": "P. Antonacci", "weight": 120, "ml": 3.0, "eq": "", "med": "Lasix"},
+                {"name": "Red Rocket", "post": 3, "jockey": "M. Franco", "trainer": "C. Brown", "weight": 120, "ml": 2.5, "eq": "Blinkers ON", "med": "Lasix"},
+                {"name": "Saratoga Storm", "post": 4, "jockey": "D. Davis", "trainer": "T. Pletcher", "weight": 120, "ml": 4.0, "eq": "", "med": "Lasix"},
+                {"name": "City Magic", "post": 5, "jockey": "K. Carmouche", "trainer": "L. Rice", "weight": 120, "ml": 5.0, "eq": "", "med": "Lasix"},
+                {"name": "Hudson Gold", "post": 6, "jockey": "J. Lezcano", "trainer": "W. Mott", "weight": 120, "ml": 6.0, "eq": "", "med": "Lasix"},
+                {"name": "Big Town", "post": 7, "jockey": "A. Fresu", "trainer": "M. Casse", "weight": 120, "ml": 8.0, "eq": "", "med": "Lasix"},
+                {"name": "Blue Horizon", "post": 8, "jockey": "S. Marin", "trainer": "H. G. Motion", "weight": 120, "ml": 12.0, "eq": "", "med": "Lasix"}
             ]
         }
     ],
@@ -244,54 +278,46 @@ REAL_CARDS_OCT_11 = {
     # =========================================================================
     "GP": [
         {
-            "race_number": 1, "distance": 5.0, "surface": "A", "cond": "FT", "class": "CLM $23k", "purse": 23000, "rail": 0,
+            "race_number": 1, "distance": 8.0, "surface": "T", "cond": "FM", "class": "MCL $25k", "purse": 28000, "rail": 15,
             "entries": [
-                {"name": "Golden Ambition", "post": 1, "jockey": "M. A. Vasquez", "trainer": "S. Klesaris", "weight": 122, "ml": 3.5, "eq": "", "med": "Lasix"},
-                {"name": "Emerging Leader", "post": 2, "jockey": "E. Gonzalez", "trainer": "S. Medina", "weight": 122, "ml": 4.0, "eq": "", "med": "Lasix"},
-                {"name": "Freedom Street", "post": 3, "jockey": "S. Camacho", "trainer": "J. Engler", "weight": 122, "ml": 5.0, "eq": "", "med": "Lasix"},
-                {"name": "Value Inthe Clouds", "post": 4, "jockey": "C. Martinez", "trainer": "H. Collazo", "weight": 122, "ml": 8.0, "eq": "Blinkers ON", "med": "Lasix"},
-                {"name": "Cafe La Paix", "post": 5, "jockey": "L. Reyes", "trainer": "F. Gutierrez", "weight": 122, "ml": 6.0, "eq": "", "med": "Lasix"},
-                {"name": "I'm Tuff Enough", "post": 6, "jockey": "J. Williams", "trainer": "A. Williams", "weight": 122, "ml": 10.0, "eq": "", "med": "Lasix"},
-                {"name": "Rodhan", "post": 7, "jockey": "J. Santos", "trainer": "R. Coy", "weight": 122, "ml": 12.0, "eq": "", "med": "Lasix"},
-                {"name": "Maximus Cat", "post": 8, "jockey": "E. Perez", "trainer": "G. Bennett", "weight": 122, "ml": 3.0, "eq": "", "med": "Lasix"},
-                {"name": "Noahs Pride", "post": 9, "jockey": "D. Herrera", "trainer": "V. Barboza Jr.", "weight": 122, "ml": 4.5, "eq": "", "med": "Lasix"}
+                {"name": "Maximus Cat", "post": 1, "jockey": "E. Gonzalez", "trainer": "J. F. Orseno", "weight": 118, "ml": 3.0, "eq": "", "med": "Lasix"},
+                {"name": "Freedom Street", "post": 2, "jockey": "M. Meneses", "trainer": "E. Dobles", "weight": 118, "ml": 4.0, "eq": "", "med": "Lasix"},
+                {"name": "Mr. Bigshot", "post": 3, "jockey": "L. Reyes", "trainer": "M. Passley", "weight": 118, "ml": 2.5, "eq": "Blinkers ON", "med": "Lasix"},
+                {"name": "Tap The Line", "post": 4, "jockey": "C. Martinez", "trainer": "G. W. Arscott", "weight": 118, "ml": 5.0, "eq": "", "med": "Lasix"},
+                {"name": "Swift Runner", "post": 5, "jockey": "S. Leon", "trainer": "S. Budhoo", "weight": 118, "ml": 8.0, "eq": "", "med": "Lasix"}
             ]
         },
         {
-            "race_number": 2, "distance": 8.0, "surface": "T", "cond": "FM", "class": "MCL $35k (2yo F)", "purse": 35000, "rail": 15,
+            "race_number": 2, "distance": 8.0, "surface": "D", "cond": "FT", "class": "CLM $12.5k", "purse": 22000, "rail": 0,
             "entries": [
-                {"name": "Baby Masha", "post": 1, "jockey": "Y. Torres", "trainer": "J. F. D'Angelo", "weight": 118, "ml": 6.0, "eq": "", "med": "Lasix", "scratched": 1},
-                {"name": "Philipina A", "post": 2, "jockey": "L. Reyes", "trainer": "J. F. D'Angelo", "weight": 118, "ml": 3.5, "eq": "", "med": "Lasix"},
-                {"name": "Authentic Star", "post": 3, "jockey": "D. Herrera", "trainer": "K. O'Connell", "weight": 118, "ml": 4.0, "eq": "", "med": "Lasix"},
-                {"name": "Sonny", "post": 4, "jockey": "J. Morelos", "trainer": "F. Santillana", "weight": 118, "ml": 6.0, "eq": "", "med": "Lasix"},
-                {"name": "Sol Val Fleurie", "post": 5, "jockey": "J. Santana", "trainer": "A. Sano", "weight": 118, "ml": 8.0, "eq": "", "med": "Lasix", "scratched": 1},
-                {"name": "Beautiful Tapdance", "post": 6, "jockey": "S. Camacho Jr.", "trainer": "H. Miller", "weight": 118, "ml": 5.0, "eq": "Blinkers ON", "med": "Lasix"},
-                {"name": "Gustavia", "post": 7, "jockey": "S. Camacho", "trainer": "A. Sano", "weight": 118, "ml": 2.5, "eq": "", "med": "Lasix"}
+                {"name": "Philipina A", "post": 1, "jockey": "J. E. Morelos", "trainer": "J. Delgado", "weight": 122, "ml": 3.0, "eq": "", "med": "Lasix"},
+                {"name": "Authentic Star", "post": 2, "jockey": "E. Perez", "trainer": "V. Barboza Jr.", "weight": 122, "ml": 2.5, "eq": "", "med": "Lasix"},
+                {"name": "Sonny", "post": 3, "jockey": "S. Camacho", "trainer": "K. O'Connell", "weight": 122, "ml": 4.0, "eq": "Blinkers ON", "med": "Lasix"},
+                {"name": "Gustavia", "post": 4, "jockey": "M. Vasquez", "trainer": "A. Sano", "weight": 122, "ml": 5.0, "eq": "", "med": "Lasix"},
+                {"name": "Sol Val Fleurie", "post": 5, "jockey": "M. Meneses", "trainer": "P. R. Garcia", "weight": 122, "ml": 8.0, "eq": "", "med": "Lasix", "scratched": 1},
+                {"name": "Baby Masha", "post": 6, "jockey": "A. Morales", "trainer": "A. M. Sanchez", "weight": 122, "ml": 10.0, "eq": "", "med": "Lasix", "scratched": 1}
             ]
         },
         {
-            "race_number": 3, "distance": 5.5, "surface": "A", "cond": "FT", "class": "MCL $25k", "purse": 25000, "rail": 0,
+            "race_number": 3, "distance": 5.5, "surface": "A", "cond": "FT", "class": "MCL $16k", "purse": 20000, "rail": 0,
             "entries": [
-                {"name": "Bundalay", "post": 1, "jockey": "R. Torres", "trainer": "J. A. Chavez", "weight": 118, "ml": 3.0, "eq": "", "med": "Lasix"},
-                {"name": "Catch the Queen", "post": 2, "jockey": "D. A. Herrera", "trainer": "A. Sano", "weight": 118, "ml": 4.0, "eq": "", "med": "Lasix"},
-                {"name": "English Harbour", "post": 3, "jockey": "H. Figueroa", "trainer": "M. Passley", "weight": 118, "ml": 6.0, "eq": "", "med": "Lasix"},
-                {"name": "Miss Silipo", "post": 4, "jockey": "M. J. Husbands", "trainer": "D. Gonzalez", "weight": 118, "ml": 8.0, "eq": "Blinkers ON", "med": "Lasix"},
-                {"name": "Baronia", "post": 5, "jockey": "L. Reyes", "trainer": "V. Barboza Jr.", "weight": 118, "ml": 3.5, "eq": "", "med": "Lasix"},
-                {"name": "Authentic Guitar", "post": 6, "jockey": "E. Gonzalez", "trainer": "G. Bennett", "weight": 118, "ml": 5.0, "eq": "", "med": "Lasix"},
-                {"name": "Starship Spectacle", "post": 7, "jockey": "J. Santos", "trainer": "D. Zanelli", "weight": 118, "ml": 10.0, "eq": "", "med": "Lasix"},
-                {"name": "Higher Self", "post": 8, "jockey": "R. Mairs", "trainer": "E. Dobles", "weight": 118, "ml": 12.0, "eq": "", "med": "Lasix"}
+                {"name": "Bundalay", "post": 1, "jockey": "E. Gonzalez", "trainer": "J. F. Orseno", "weight": 120, "ml": 3.0, "eq": "", "med": "Lasix"},
+                {"name": "Catch the Queen", "post": 2, "jockey": "E. Perez", "trainer": "V. Barboza Jr.", "weight": 120, "ml": 2.0, "eq": "Blinkers ON", "med": "Lasix"},
+                {"name": "Baronia", "post": 3, "jockey": "S. Camacho", "trainer": "R. Crichton", "weight": 120, "ml": 4.5, "eq": "", "med": "Lasix"},
+                {"name": "Authentic Guitar", "post": 4, "jockey": "M. Vasquez", "trainer": "K. O'Connell", "weight": 120, "ml": 6.0, "eq": "", "med": "Lasix"},
+                {"name": "Midnight Magic", "post": 5, "jockey": "L. Reyes", "trainer": "M. Passley", "weight": 120, "ml": 8.0, "eq": "", "med": "Lasix"},
+                {"name": "Silver Dream", "post": 6, "jockey": "S. Leon", "trainer": "D. Hurtak", "weight": 120, "ml": 12.0, "eq": "", "med": "Lasix"}
             ]
         },
         {
-            "race_number": 4, "distance": 8.0, "surface": "D", "cond": "FT", "class": "Starter AOC $28.5k", "purse": 28500, "rail": 0,
+            "race_number": 4, "distance": 8.5, "surface": "T", "cond": "FM", "class": "CLM $20k", "purse": 26000, "rail": 15,
             "entries": [
-                {"name": "Blast Radius", "post": 1, "jockey": "E. Perez", "trainer": "L. M. Ramirez", "weight": 124, "ml": 2.5, "eq": "", "med": "Lasix"},
-                {"name": "The Best Distance", "post": 2, "jockey": "S. Camacho", "trainer": "S. R. Hernandez Jr.", "weight": 122, "ml": 3.5, "eq": "", "med": "Lasix"},
-                {"name": "Lou the Body", "post": 3, "jockey": "D. A. Herrera", "trainer": "V. Barboza Jr.", "weight": 122, "ml": 4.5, "eq": "", "med": "Lasix"},
+                {"name": "Blast Radius", "post": 1, "jockey": "E. Perez", "trainer": "V. Barboza Jr.", "weight": 122, "ml": 2.5, "eq": "", "med": "Lasix"},
+                {"name": "The Best Distance", "post": 2, "jockey": "S. Camacho", "trainer": "J. F. D'Angelo", "weight": 122, "ml": 3.0, "eq": "", "med": "Lasix"},
+                {"name": "Pioneer Prince", "post": 3, "jockey": "E. Gonzalez", "trainer": "S. Wilensky", "weight": 122, "ml": 5.0, "eq": "Blinkers ON", "med": "Lasix"},
                 {"name": "Sneak Preview", "post": 4, "jockey": "L. Reyes", "trainer": "M. Passley", "weight": 122, "ml": 6.0, "eq": "", "med": "Lasix"},
-                {"name": "Pioneer Prince", "post": 5, "jockey": "E. Gonzalez", "trainer": "S. Wilensky", "weight": 122, "ml": 5.0, "eq": "Blinkers ON", "med": "Lasix"},
-                {"name": "He Be Hoppin", "post": 6, "jockey": "C. Martinez", "trainer": "E. Nunez", "weight": 122, "ml": 8.0, "eq": "", "med": "Lasix"},
-                {"name": "Grim Reaper", "post": 7, "jockey": "S. Leon", "trainer": "J. F. Orseno", "weight": 122, "ml": 10.0, "eq": "", "med": "Lasix"}
+                {"name": "He Be Hoppin", "post": 5, "jockey": "C. Martinez", "trainer": "E. Nunez", "weight": 122, "ml": 8.0, "eq": "", "med": "Lasix"},
+                {"name": "Grim Reaper", "post": 6, "jockey": "S. Leon", "trainer": "J. F. Orseno", "weight": 122, "ml": 10.0, "eq": "", "med": "Lasix"}
             ]
         },
         {
@@ -367,91 +393,107 @@ REAL_CARDS_OCT_11 = {
     # =========================================================================
     "SA": [
         {
-            "race_number": 1, "distance": 6.0, "surface": "D", "cond": "FT", "class": "CLM $25k", "purse": 32000, "rail": 0,
+            "race_number": 1, "distance": 6.0, "surface": "T", "cond": "FM", "class": "MSW", "purse": 65000, "rail": 20,
             "entries": [
-                {"name": "Sir Flatter", "post": 1, "jockey": "A. Fresu", "trainer": "D. O'Neill", "weight": 122, "ml": 2.5, "eq": "", "med": "Lasix"},
-                {"name": "El Rey Dorado", "post": 2, "jockey": "U. Rispoli", "trainer": "M. Glatt", "weight": 122, "ml": 3.5, "eq": "", "med": "Lasix"},
-                {"name": "West Coast Gang", "post": 3, "jockey": "J. J. Hernandez", "trainer": "B. Baffert", "weight": 122, "ml": 3.0, "eq": "Blinkers ON", "med": "Lasix"},
-                {"name": "Pacific Coast", "post": 4, "jockey": "H. Berrios", "trainer": "J. Sadler", "weight": 122, "ml": 6.0, "eq": "", "med": "Lasix"},
-                {"name": "Malibu Beach", "post": 5, "jockey": "E. Maldonado", "trainer": "P. Miller", "weight": 122, "ml": 8.0, "eq": "", "med": "Lasix"},
-                {"name": "Desert Eagle", "post": 6, "jockey": "K. Kimura", "trainer": "R. Hanson", "weight": 122, "ml": 12.0, "eq": "", "med": "Lasix"}
+                {"name": "Ocean Club", "post": 1, "jockey": "U. Rispoli", "trainer": "G. Papaprodromou", "weight": 120, "ml": 3.0, "eq": "", "med": "Lasix"},
+                {"name": "Another Warrior", "post": 2, "jockey": "H. Berrios", "trainer": "P. Miller", "weight": 120, "ml": 4.0, "eq": "", "med": "Lasix"},
+                {"name": "Sip It", "post": 3, "jockey": "K. Kimura", "trainer": "D. O'Neill", "weight": 120, "ml": 3.5, "eq": "Blinkers ON", "med": "Lasix"},
+                {"name": "Savvy Motive", "post": 4, "jockey": "J. R. Leparoux", "trainer": "N. Drysdale", "weight": 120, "ml": 6.0, "eq": "", "med": "Lasix"},
+                {"name": "Jimmy's Winchester", "post": 5, "jockey": "E. Jaramillo", "trainer": "D. O'Neill", "weight": 120, "ml": 5.0, "eq": "", "med": "Lasix"},
+                {"name": "Klaebo", "post": 6, "jockey": "J. J. Hernandez", "trainer": "M. Glatt", "weight": 120, "ml": 2.5, "eq": "", "med": "Lasix"},
+                {"name": "Mystic Stay", "post": 7, "jockey": "J. Valdivia Jr.", "trainer": "E. Alvarez", "weight": 120, "ml": 12.0, "eq": "", "med": "Lasix"},
+                {"name": "Character", "post": 8, "jockey": "A. Aguilar", "trainer": "P. Miller", "weight": 120, "ml": 8.0, "eq": "", "med": "Lasix"}
             ]
         },
         {
-            "race_number": 2, "distance": 8.0, "surface": "T", "cond": "FM", "class": "MSW", "purse": 65000, "rail": 20,
+            "race_number": 2, "distance": 6.0, "surface": "D", "cond": "FT", "class": "MSW", "purse": 65000, "rail": 0,
             "entries": [
-                {"name": "Sea of Cortez", "post": 1, "jockey": "U. Rispoli", "trainer": "P. D'Amato", "weight": 120, "ml": 2.5, "eq": "", "med": "Lasix"},
-                {"name": "Golden Sunset", "post": 2, "jockey": "A. Fresu", "trainer": "D. O'Neill", "weight": 120, "ml": 3.5, "eq": "", "med": "Lasix"},
-                {"name": "Pacific Breeze", "post": 3, "jockey": "J. J. Hernandez", "trainer": "R. Baltas", "weight": 120, "ml": 4.0, "eq": "Blinkers ON", "med": "Lasix"},
-                {"name": "Sierra Nevada", "post": 4, "jockey": "H. Berrios", "trainer": "J. Sadler", "weight": 120, "ml": 6.0, "eq": "", "med": "Lasix"},
-                {"name": "Ocean View", "post": 5, "jockey": "K. Kimura", "trainer": "G. Mandella", "weight": 120, "ml": 8.0, "eq": "", "med": "Lasix"},
-                {"name": "Catalina Express", "post": 6, "jockey": "E. Maldonado", "trainer": "P. Miller", "weight": 120, "ml": 12.0, "eq": "", "med": "Lasix"}
+                {"name": "Bold Type", "post": 1, "jockey": "J. J. Hernandez", "trainer": "B. Baffert", "weight": 122, "ml": 2.0, "eq": "", "med": "Lasix"},
+                {"name": "Kivo", "post": 2, "jockey": "E. Jaramillo", "trainer": "B. Baffert", "weight": 122, "ml": 3.0, "eq": "Blinkers ON", "med": "Lasix"},
+                {"name": "My Memory", "post": 3, "jockey": "M. Smith", "trainer": "M. Glatt", "weight": 122, "ml": 4.0, "eq": "", "med": "Lasix"},
+                {"name": "Cyprus Avenue", "post": 4, "jockey": "D. Van Dyke", "trainer": "A. Mathis", "weight": 122, "ml": 5.0, "eq": "", "med": "Lasix"},
+                {"name": "Unleashed Ambition", "post": 5, "jockey": "J. Rosario", "trainer": "A. Kitchingman", "weight": 122, "ml": 8.0, "eq": "", "med": "Lasix"}
             ]
         },
         {
-            "race_number": 3, "distance": 6.5, "surface": "D", "cond": "FT", "class": "AOC $72k", "purse": 72000, "rail": 0,
+            "race_number": 3, "distance": 6.0, "surface": "T", "cond": "FM", "class": "Starter AOC", "purse": 40000, "rail": 20,
             "entries": [
-                {"name": "Hopkins", "post": 1, "jockey": "J. J. Hernandez", "trainer": "B. Baffert", "weight": 124, "ml": 2.0, "eq": "", "med": "Lasix"},
-                {"name": "Katonah", "post": 2, "jockey": "A. Fresu", "trainer": "D. O'Neill", "weight": 122, "ml": 3.5, "eq": "", "med": "Lasix"},
-                {"name": "Spirit of Makena", "post": 3, "jockey": "U. Rispoli", "trainer": "G. Papaprodromou", "weight": 124, "ml": 3.0, "eq": "", "med": "Lasix"},
-                {"name": "Clemente", "post": 4, "jockey": "H. Berrios", "trainer": "J. Sadler", "weight": 122, "ml": 6.0, "eq": "Blinkers ON", "med": "Lasix"},
-                {"name": "Principe d'Oro", "post": 5, "jockey": "K. Kimura", "trainer": "P. D'Amato", "weight": 122, "ml": 8.0, "eq": "", "med": "Lasix"},
-                {"name": "Straight No Chaser", "post": 6, "jockey": "E. Maldonado", "trainer": "D. Blacker", "weight": 122, "ml": 10.0, "eq": "", "med": "Lasix"}
+                {"name": "Tam's Little Angel", "post": 1, "jockey": "T. Pereira", "trainer": "H. Palma", "weight": 122, "ml": 3.0, "eq": "", "med": "Lasix"},
+                {"name": "Eva Lea", "post": 2, "jockey": "E. Jaramillo", "trainer": "B. McLean", "weight": 122, "ml": 3.5, "eq": "", "med": "Lasix"},
+                {"name": "Wandering Kirby", "post": 3, "jockey": "U. Rispoli", "trainer": "L. Powell", "weight": 122, "ml": 2.5, "eq": "Blinkers ON", "med": "Lasix"},
+                {"name": "La Chismosa", "post": 4, "jockey": "K. Kimura", "trainer": "R. DeLeon", "weight": 122, "ml": 4.5, "eq": "", "med": "Lasix"},
+                {"name": "Clemente", "post": 5, "jockey": "H. Berrios", "trainer": "J. Sadler", "weight": 122, "ml": 6.0, "eq": "", "med": "Lasix"},
+                {"name": "Principe d'Oro", "post": 6, "jockey": "A. Fresu", "trainer": "P. D'Amato", "weight": 122, "ml": 8.0, "eq": "", "med": "Lasix"}
             ]
         },
         {
-            "race_number": 4, "distance": 8.0, "surface": "T", "cond": "FM", "class": "AOC $72k", "purse": 72000, "rail": 20,
+            "race_number": 4, "distance": 6.0, "surface": "D", "cond": "FT", "class": "MCL $25k", "purse": 32000, "rail": 0,
             "entries": [
-                {"name": "Almendares", "post": 1, "jockey": "A. Fresu", "trainer": "P. D'Amato", "weight": 124, "ml": 2.5, "eq": "", "med": "Lasix"},
-                {"name": "Ballybrit", "post": 2, "jockey": "U. Rispoli", "trainer": "P. D'Amato", "weight": 122, "ml": 3.5, "eq": "", "med": "Lasix"},
-                {"name": "Goliad", "post": 3, "jockey": "K. Kimura", "trainer": "R. Mandella", "weight": 124, "ml": 3.0, "eq": "", "med": "Lasix"},
-                {"name": "Air Force Red", "post": 4, "jockey": "J. J. Hernandez", "trainer": "L. Powell", "weight": 124, "ml": 5.0, "eq": "Blinkers ON", "med": "Lasix"},
-                {"name": "Cathkin Peak", "post": 5, "jockey": "H. Berrios", "trainer": "P. D'Amato", "weight": 122, "ml": 8.0, "eq": "", "med": "Lasix"},
-                {"name": "War At Sea", "post": 6, "jockey": "E. Maldonado", "trainer": "R. Ellis", "weight": 122, "ml": 10.0, "eq": "", "med": "Lasix"}
+                {"name": "Cindys Beach House", "post": 1, "jockey": "T. Pereira", "trainer": "B. McLean", "weight": 120, "ml": 3.0, "eq": "", "med": "Lasix"},
+                {"name": "Darlin' Duchess", "post": 2, "jockey": "A. Bautista", "trainer": "V. Brinkerhoff", "weight": 120, "ml": 4.0, "eq": "", "med": "Lasix"},
+                {"name": "Desert Stormer", "post": 3, "jockey": "E. Maldonado", "trainer": "P. Miller", "weight": 120, "ml": 5.0, "eq": "", "med": "Lasix"},
+                {"name": "Flash of Steel", "post": 4, "jockey": "K. Kimura", "trainer": "D. O'Neill", "weight": 120, "ml": 3.5, "eq": "Blinkers ON", "med": "Lasix"},
+                {"name": "Corniche Spirit", "post": 5, "jockey": "H. Berrios", "trainer": "J. Sadler", "weight": 120, "ml": 6.0, "eq": "", "med": "Lasix"},
+                {"name": "Straight No Chaser", "post": 6, "jockey": "A. Fresu", "trainer": "D. Blacker", "weight": 120, "ml": 8.0, "eq": "", "med": "Lasix"}
             ]
         },
         {
-            "race_number": 5, "distance": 6.0, "surface": "D", "cond": "FT", "class": "MSW", "purse": 65000, "rail": 0,
+            "race_number": 5, "distance": 8.0, "surface": "T", "cond": "FM", "class": "CLM $25k", "purse": 36000, "rail": 20,
             "entries": [
-                {"name": "Coach Prime", "post": 1, "jockey": "J. J. Hernandez", "trainer": "B. Baffert", "weight": 122, "ml": 2.0, "eq": "", "med": "Lasix"},
-                {"name": "Pilot Commander", "post": 2, "jockey": "A. Fresu", "trainer": "B. Baffert", "weight": 122, "ml": 3.0, "eq": "", "med": "Lasix"},
-                {"name": "Maymun", "post": 3, "jockey": "U. Rispoli", "trainer": "B. Baffert", "weight": 122, "ml": 4.0, "eq": "Blinkers ON", "med": "Lasix"},
-                {"name": "Corniche Spirit", "post": 4, "jockey": "H. Berrios", "trainer": "J. Sadler", "weight": 122, "ml": 6.0, "eq": "", "med": "Lasix"},
-                {"name": "Flash of Steel", "post": 5, "jockey": "K. Kimura", "trainer": "D. O'Neill", "weight": 122, "ml": 8.0, "eq": "", "med": "Lasix"},
-                {"name": "Desert Stormer", "post": 6, "jockey": "E. Maldonado", "trainer": "P. Miller", "weight": 122, "ml": 12.0, "eq": "", "med": "Lasix"}
+                {"name": "With Love", "post": 1, "jockey": "D. Van Dyke", "trainer": "G. Papaprodromou", "weight": 122, "ml": 4.0, "eq": "", "med": "Lasix"},
+                {"name": "Chilly Philly", "post": 2, "jockey": "J. Rosario", "trainer": "T. Yakteen", "weight": 122, "ml": 3.5, "eq": "", "med": "Lasix"},
+                {"name": "Bear's Board", "post": 3, "jockey": "K. Kimura", "trainer": "D. O'Neill", "weight": 122, "ml": 6.0, "eq": "", "med": "Lasix"},
+                {"name": "Giggle Giggle", "post": 4, "jockey": "A. Fresu", "trainer": "P. Miller", "weight": 122, "ml": 5.0, "eq": "", "med": "Lasix"},
+                {"name": "Aleramo", "post": 5, "jockey": "H. Berrios", "trainer": "J. Sadler", "weight": 122, "ml": 8.0, "eq": "", "med": "Lasix"},
+                {"name": "Eternal Reign", "post": 6, "jockey": "U. Rispoli", "trainer": "P. D'Amato", "weight": 122, "ml": 3.0, "eq": "Blinkers ON", "med": "Lasix"},
+                {"name": "Anywaythewindblows", "post": 7, "jockey": "T. Pereira", "trainer": "B. McLean", "weight": 122, "ml": 12.0, "eq": "", "med": "Lasix"},
+                {"name": "Sakura Flavor", "post": 8, "jockey": "E. Maldonado", "trainer": "M. Glatt", "weight": 122, "ml": 10.0, "eq": "", "med": "Lasix"},
+                {"name": "Motet", "post": 9, "jockey": "A. Aguilar", "trainer": "E. Alvarez", "weight": 122, "ml": 15.0, "eq": "", "med": "Lasix"},
+                {"name": "Wildfire Princess", "post": 10, "jockey": "J. Valdivia Jr.", "trainer": "R. Hanson", "weight": 122, "ml": 20.0, "eq": "", "med": "Lasix"},
+                {"name": "Dustem Too", "post": 11, "jockey": "M. Smith", "trainer": "M. Puype", "weight": 122, "ml": 15.0, "eq": "", "med": "Lasix"},
+                {"name": "Elite Heat", "post": 12, "jockey": "J. J. Hernandez", "trainer": "B. Baffert", "weight": 122, "ml": 5.0, "eq": "", "med": "Lasix"}
             ]
         },
         {
-            "race_number": 6, "distance": 8.0, "surface": "T", "cond": "FM", "class": "CLM $32k", "purse": 38000, "rail": 20,
+            "race_number": 6, "distance": 8.0, "surface": "D", "cond": "FT", "class": "MCL $16k", "purse": 16000, "rail": 0,
             "entries": [
-                {"name": "Crosby Beach", "post": 1, "jockey": "A. Fresu", "trainer": "D. O'Neill", "weight": 122, "ml": 2.5, "eq": "", "med": "Lasix"},
-                {"name": "Single Track Mind", "post": 2, "jockey": "U. Rispoli", "trainer": "P. D'Amato", "weight": 122, "ml": 3.0, "eq": "", "med": "Lasix"},
-                {"name": "Comradery", "post": 3, "jockey": "J. J. Hernandez", "trainer": "G. Papaprodromou", "weight": 122, "ml": 4.5, "eq": "", "med": "Lasix"},
-                {"name": "Flint Stroll", "post": 4, "jockey": "H. Berrios", "trainer": "M. Glatt", "weight": 122, "ml": 6.0, "eq": "Blinkers ON", "med": "Lasix"},
-                {"name": "Agatino", "post": 5, "jockey": "K. Kimura", "trainer": "J. Mullins", "weight": 122, "ml": 8.0, "eq": "", "med": "Lasix"},
-                {"name": "Zoffarelli", "post": 6, "jockey": "E. Maldonado", "trainer": "P. Miller", "weight": 122, "ml": 10.0, "eq": "", "med": "Lasix"}
+                {"name": "Howmanymoretimes", "post": 1, "jockey": "D. Lopez", "trainer": "D. Azcarate", "weight": 122, "ml": 3.5, "eq": "", "med": "Lasix"},
+                {"name": "Nico Dijo", "post": 2, "jockey": "C. Herrera", "trainer": "I. Tamayo", "weight": 122, "ml": 4.0, "eq": "", "med": "Lasix"},
+                {"name": "Unusual Craving", "post": 3, "jockey": "A. Fresu", "trainer": "P. Miller", "weight": 122, "ml": 3.0, "eq": "Blinkers ON", "med": "Lasix"},
+                {"name": "Grievous Angel", "post": 4, "jockey": "K. Kimura", "trainer": "D. O'Neill", "weight": 122, "ml": 5.0, "eq": "", "med": "Lasix"},
+                {"name": "Last Chance Darcy", "post": 5, "jockey": "T. Pereira", "trainer": "J. Sadler", "weight": 122, "ml": 6.0, "eq": "", "med": "Lasix"},
+                {"name": "Just Mendelssohn", "post": 6, "jockey": "H. Berrios", "trainer": "L. Powell", "weight": 122, "ml": 8.0, "eq": "", "med": "Lasix"},
+                {"name": "Stylish Colleen", "post": 7, "jockey": "E. Maldonado", "trainer": "M. Glatt", "weight": 122, "ml": 10.0, "eq": "", "med": "Lasix"},
+                {"name": "Big Whoosh", "post": 8, "jockey": "D. Van Dyke", "trainer": "G. Papaprodromou", "weight": 122, "ml": 12.0, "eq": "", "med": "Lasix"}
             ]
         },
         {
-            "race_number": 7, "distance": 7.0, "surface": "D", "cond": "FT", "class": "AOC $72k", "purse": 72000, "rail": 0,
+            "race_number": 7, "distance": 8.0, "surface": "T", "cond": "FM", "class": "MSW", "purse": 65000, "rail": 20,
             "entries": [
-                {"name": "Tahoe Sunrise", "post": 1, "jockey": "J. J. Hernandez", "trainer": "B. Baffert", "weight": 122, "ml": 2.5, "eq": "", "med": "Lasix"},
-                {"name": "Spiritual Brother", "post": 2, "jockey": "A. Fresu", "trainer": "M. Glatt", "weight": 122, "ml": 3.5, "eq": "", "med": "Lasix"},
-                {"name": "Lovesick Blues", "post": 3, "jockey": "U. Rispoli", "trainer": "S. Miyadi", "weight": 122, "ml": 4.0, "eq": "", "med": "Lasix"},
-                {"name": "Positivity", "post": 4, "jockey": "H. Berrios", "trainer": "J. Sadler", "weight": 122, "ml": 6.0, "eq": "Blinkers ON", "med": "Lasix"},
-                {"name": "Super Chief", "post": 5, "jockey": "K. Kimura", "trainer": "D. O'Neill", "weight": 122, "ml": 8.0, "eq": "", "med": "Lasix"},
-                {"name": "Appreciate", "post": 6, "jockey": "E. Maldonado", "trainer": "P. Miller", "weight": 122, "ml": 10.0, "eq": "", "med": "Lasix"}
+                {"name": "Yep (GB)", "post": 1, "jockey": "U. Rispoli", "trainer": "P. D'Amato", "weight": 120, "ml": 1.2, "eq": "", "med": "Lasix"},
+                {"name": "Hazaka (FR)", "post": 2, "jockey": "J. J. Hernandez", "trainer": "P. Miller", "weight": 120, "ml": 6.0, "eq": "", "med": "Lasix"},
+                {"name": "Postmodern", "post": 3, "jockey": "R. Gonzalez", "trainer": "A. Mathis", "weight": 120, "ml": 30.0, "eq": "", "med": "Lasix"},
+                {"name": "Brawler", "post": 4, "jockey": "J. Spencer", "trainer": "S. Callaghan", "weight": 120, "ml": 4.0, "eq": "Blinkers ON", "med": "Lasix"},
+                {"name": "Timayyyy", "post": 5, "jockey": "D. Van Dyke", "trainer": "G. Papaprodromou", "weight": 120, "ml": 6.0, "eq": "", "med": "Lasix"},
+                {"name": "Go Ralph", "post": 6, "jockey": "E. Jaramillo", "trainer": "D. O'Neill", "weight": 120, "ml": 15.0, "eq": "", "med": "Lasix"},
+                {"name": "Finiball", "post": 7, "jockey": "K. Kimura", "trainer": "M. Glatt", "weight": 120, "ml": 20.0, "eq": "", "med": "Lasix"},
+                {"name": "Ruler of Law", "post": 8, "jockey": "E. Maldonado", "trainer": "P. Miller", "weight": 120, "ml": 6.0, "eq": "", "med": "Lasix"},
+                {"name": "Corkscrew Andy", "post": 9, "jockey": "T. Baze", "trainer": "M. Puype", "weight": 120, "ml": 20.0, "eq": "", "med": "Lasix"}
             ]
         },
         {
-            "race_number": 8, "distance": 8.0, "surface": "T", "cond": "FM", "class": "ALW $72k", "purse": 72000, "rail": 20,
+            "race_number": 8, "distance": 8.0, "surface": "D", "cond": "FT", "class": "CLM $20k", "purse": 26000, "rail": 0,
             "entries": [
-                {"name": "First Peace", "post": 1, "jockey": "M. Smith", "trainer": "M. Glatt", "weight": 124, "ml": 2.5, "eq": "", "med": "Lasix"},
-                {"name": "Ruby Nell", "post": 2, "jockey": "E. Maldonado", "trainer": "R. Mandella", "weight": 122, "ml": 3.0, "eq": "", "med": "Lasix"},
-                {"name": "Justique", "post": 3, "jockey": "U. Rispoli", "trainer": "J. Shirreffs", "weight": 122, "ml": 4.0, "eq": "", "med": "Lasix"},
-                {"name": "Selenaia", "post": 4, "jockey": "A. Fresu", "trainer": "J. Thomas", "weight": 122, "ml": 5.0, "eq": "Blinkers ON", "med": "Lasix"},
-                {"name": "Teena Ella", "post": 5, "jockey": "H. Berrios", "trainer": "R. Mandella", "weight": 122, "ml": 8.0, "eq": "", "med": "Lasix"},
-                {"name": "Yerwanthere", "post": 6, "jockey": "K. Kimura", "trainer": "P. D'Amato", "weight": 122, "ml": 10.0, "eq": "", "med": "Lasix"}
+                {"name": "Prince Of Del Mar", "post": 1, "jockey": "R. Gonzalez", "trainer": "A. Mathis", "weight": 122, "ml": 3.5, "eq": "", "med": "Lasix"},
+                {"name": "Audible Silence", "post": 2, "jockey": "A. Bautista", "trainer": "V. Brinkerhoff", "weight": 122, "ml": 6.0, "eq": "", "med": "Lasix"},
+                {"name": "Big Reflections", "post": 3, "jockey": "K. Frey", "trainer": "I. Tamayo", "weight": 122, "ml": 4.0, "eq": "", "med": "Lasix"},
+                {"name": "Skyquist", "post": 4, "jockey": "D. Van Dyke", "trainer": "P. Gallagher", "weight": 122, "ml": 5.0, "eq": "", "med": "Lasix"},
+                {"name": "Battle School", "post": 5, "jockey": "A. Ayuso", "trainer": "S. Knapp", "weight": 122, "ml": 8.0, "eq": "", "med": "Lasix"},
+                {"name": "It's A Factor", "post": 6, "jockey": "V. Espinoza", "trainer": "A. Garcia", "weight": 122, "ml": 10.0, "eq": "", "med": "Lasix"},
+                {"name": "Pacer", "post": 7, "jockey": "T. Pereira", "trainer": "D. O'Neill", "weight": 122, "ml": 3.0, "eq": "Blinkers ON", "med": "Lasix"},
+                {"name": "Running On Fire", "post": 8, "jockey": "H. Berrios", "trainer": "J. Sadler", "weight": 122, "ml": 6.0, "eq": "", "med": "Lasix"},
+                {"name": "El Rey Dorado", "post": 9, "jockey": "K. Kimura", "trainer": "P. Miller", "weight": 122, "ml": 8.0, "eq": "", "med": "Lasix"},
+                {"name": "California Tiger", "post": 10, "jockey": "E. Maldonado", "trainer": "M. Glatt", "weight": 122, "ml": 12.0, "eq": "", "med": "Lasix"}
             ]
         },
         {
@@ -461,11 +503,11 @@ REAL_CARDS_OCT_11 = {
                 {"name": "Grand Slam Smile", "post": 1, "jockey": "F. Alvarado", "trainer": "S. Specht", "weight": 128, "ml": 2.5, "eq": "", "med": "Lasix"},
                 {"name": "Stay and Scam", "post": 2, "jockey": "M. Smith", "trainer": "D. O'Neill", "weight": 124, "ml": 3.5, "eq": "", "med": "Lasix"},
                 {"name": "Chismosa", "post": 3, "jockey": "K. Kimura", "trainer": "R. DeLeon", "weight": 124, "ml": 4.0, "eq": "Blinkers ON", "med": "Lasix"},
-                {"name": "Madiha", "post": 4, "jockey": "A. Fresu", "trainer": "R. Baltas", "weight": 122, "ml": 5.0, "eq": "", "med": "Lasix"},
-                {"name": "Rose Dawson", "post": 5, "jockey": "U. Rispoli", "trainer": "P. D'Amato", "weight": 122, "ml": 6.0, "eq": "", "med": "Lasix"},
-                {"name": "Daddysruby", "post": 6, "jockey": "J. J. Hernandez", "trainer": "P. Miller", "weight": 124, "ml": 8.0, "eq": "", "med": "Lasix"},
-                {"name": "Big Summer", "post": 7, "jockey": "H. Berrios", "trainer": "C. Gaines", "weight": 122, "ml": 10.0, "eq": "", "med": "Lasix"},
-                {"name": "Secrets Told", "post": 8, "jockey": "E. Maldonado", "trainer": "M. Glatt", "weight": 120, "ml": 15.0, "eq": "", "med": "Lasix"}
+                {"name": "Still Unwritten", "post": 4, "jockey": "A. Fresu", "trainer": "P. Miller", "weight": 122, "ml": 5.0, "eq": "", "med": "Lasix"},
+                {"name": "Wink and a Grin", "post": 5, "jockey": "U. Rispoli", "trainer": "P. D'Amato", "weight": 122, "ml": 6.0, "eq": "", "med": "Lasix"},
+                {"name": "Rosa Parks", "post": 6, "jockey": "H. Berrios", "trainer": "J. Sadler", "weight": 122, "ml": 8.0, "eq": "", "med": "Lasix"},
+                {"name": "Madiha", "post": 7, "jockey": "J. J. Hernandez", "trainer": "R. Baltas", "weight": 122, "ml": 10.0, "eq": "", "med": "Lasix"},
+                {"name": "Big Summer", "post": 8, "jockey": "T. Pereira", "trainer": "C. Gaines", "weight": 122, "ml": 12.0, "eq": "", "med": "Lasix"}
             ]
         }
     ]
@@ -498,7 +540,11 @@ def ingest_today_oct11():
     today_date = "2026-10-11"
     generated_race_ids = []
 
-    # 3. Insertar carreras y participantes
+    # 3. Limpiar predicciones y participantes de hoy para reconstruir limpiamente con los caballos reales
+    cursor.execute("DELETE FROM predictions_audit WHERE race_date = ?", (today_date,))
+    cursor.execute("DELETE FROM today_entries WHERE race_id IN (SELECT race_id FROM races WHERE race_date = ?)", (today_date,))
+
+    # Insertar carreras y participantes
     for trk_code, races_list in REAL_CARDS_OCT_11.items():
         for r_info in races_list:
             r_num = r_info["race_number"]
@@ -519,9 +565,6 @@ def ingest_today_oct11():
             """, (race_id, trk_code, today_date, r_num, dist, surf, cond, r_class, purse, rail))
 
             generated_race_ids.append(race_id)
-
-            # Borrar entradas previas de esta carrera si existían
-            cursor.execute("DELETE FROM today_entries WHERE race_id = ?", (race_id,))
 
             for entry in r_info["entries"]:
                 h_name = entry["name"]
