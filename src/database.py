@@ -163,6 +163,18 @@ def init_database() -> None:
         cursor.execute("ALTER TABLE predictions_audit ADD COLUMN scratch_status TEXT DEFAULT 'ACTIVE';")
     except Exception:
         pass
+    try:
+        cursor.execute("ALTER TABLE predictions_audit ADD COLUMN is_enemy_hit INTEGER DEFAULT 0;")
+    except Exception:
+        pass
+    try:
+        cursor.execute("ALTER TABLE predictions_audit ADD COLUMN is_bomb_hit INTEGER DEFAULT 0;")
+    except Exception:
+        pass
+    try:
+        cursor.execute("ALTER TABLE predictions_audit ADD COLUMN is_exacta_hit INTEGER DEFAULT 0;")
+    except Exception:
+        pass
 
     # Índices para consultas ultrarrápidas de historial
     cursor.execute("CREATE INDEX IF NOT EXISTS idx_horse_name ON race_results(horse_name);")

@@ -215,18 +215,20 @@ if nav_mode == "📊 Auditoría y Aprendizaje Continuo":
 
     # 1. Métricas Globales Acumuladas
     summary = get_performance_summary()
-    kpi1, kpi2, kpi3, kpi4, kpi5 = st.columns(5)
+    kpi1, kpi2, kpi3, kpi4, kpi5, kpi6 = st.columns(6)
 
     with kpi1:
         st.metric("Carreras Evaluadas", summary["total_evaluated"])
     with kpi2:
-        st.metric("Acierto a Ganador (Win %)", f"{summary['win_rate']}%", help="Criterio estricto: solo cuenta como acierto si el Top Pick gana el 1er lugar.")
+        st.metric("Top Pick (Win %)", f"{summary['win_rate']}%", help="Criterio estricto: el Top Pick gana el 1er lugar.")
     with kpi3:
-        st.metric("Balance Ganados / Fallos", f"{summary.get('wins', 0)} Ganados / {summary.get('losses', 0)} Fallos")
+        st.metric("Top + Enemigo (Win %)", f"{summary.get('combined_win_rate', 0)}%", help="Acierto combinando el Top Pick o El Enemigo en paridad.")
     with kpi4:
-        st.metric("Retorno Financiero (ROI)", f"{summary['roi_pct']:+.1f}%")
+        st.metric("Exactas Acertadas", summary.get("exacta_hits", 0), help="Exactas sugeridas que acertaron el 1-2 oficial.")
     with kpi5:
-        st.metric("Carreras Pendientes", summary["pending_count"], delta_color="normal")
+        st.metric("Retorno (ROI)", f"{summary['roi_pct']:+.1f}%")
+    with kpi6:
+        st.metric("Pendientes", summary["pending_count"], delta_color="normal")
 
     st.markdown("---")
 
@@ -345,7 +347,16 @@ if nav_mode == "📊 Auditoría y Aprendizaje Continuo":
             st.caption(f"Mostrando **{len(history_rows)}** carreras evaluadas bajo criterio estricto Win-Only.")
             h_data = []
             for r in history_rows:
-                res_badge = "🏆 ACIERTO (1º Ganador)" if r["is_hit"] == 1 else "❌ FALLO (No Ganó)"
+                if r.get("is_hit") == 1:
+                    res_badge = "🏆 TOP PICK (Ganó)"
+                elif r.get("is_enemy_hit") == 1:
+                    res_badge = "⚔️ EL ENEMIGO (Ganó)"
+                elif r.get("is_bomb_hit") == 1:
+                    res_badge = "💣 BOMBA (Ganó)"
+                elif r.get("in_the_money") == 1:
+                    res_badge = "🥈 Pizarra (2º/3º)"
+                else:
+                    res_badge = "❌ No figuró"
                 h_data.append({
                     "Carrera": f"{r['track']} R{r['race_number']} ({r['race_date']})",
                     "⭐ Top Pick Elegido": r["top_pick"],

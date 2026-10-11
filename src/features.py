@@ -204,14 +204,15 @@ def compute_horse_profile(
     else:
         layoff_score = 50.0
 
-    ml_factor = max(10.0, 100.0 - (morning_line_odds * 8.0))
+    # Ajuste de Morning Line: Suavizado a 5.0 (para no sobrepenalizar ejemplares de valor con excelentes Speed Figures)
+    ml_factor = max(15.0, 100.0 - (morning_line_odds * 5.0))
 
     base_score = (
-        (speed_factor * 0.40) +
-        (workouts_eval["workout_score"] * 0.15) +
+        (speed_factor * 0.42) +
+        (workouts_eval["workout_score"] * 0.17) +
         (connections_factor * 0.15) +
         (layoff_score * 0.10) +
-        (ml_factor * 0.10) +
+        (ml_factor * 0.06) +
         ((surface_suitability * 100.0) * 0.10) +
         angles_eval["equipment_score"] +
         bias_eval["bias_score"]
