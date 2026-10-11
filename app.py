@@ -177,7 +177,7 @@ with st.sidebar:
             st.warning("No hay carreras registradas. Pulsa 'Sincronizar Cartelera de Hoy' arriba.")
             st.stop()
 
-        selected_date = st.selectbox("📅 Selecciona Fecha:", available_dates, index=0)
+        selected_date = st.selectbox("📅 Selecciona Fecha:", available_dates, index=0, key="sb_date")
         available_races = get_available_races(selected_date)
 
         if not available_races:
@@ -189,7 +189,7 @@ with st.sidebar:
             for r in available_races
         }
 
-        selected_label = st.selectbox("Selecciona Hipódromo y Carrera:", list(race_options.keys()))
+        selected_label = st.selectbox("Selecciona Hipódromo y Carrera:", list(race_options.keys()), key="sb_race")
         selected_race_id = race_options[selected_label]
         curr_race = next(r for r in available_races if r["race_id"] == selected_race_id)
 
@@ -251,7 +251,7 @@ if nav_mode == "📊 Auditoría y Aprendizaje Continuo":
         else:
             col_f1, col_f2 = st.columns(2)
             with col_f1:
-                sel_pdate = st.selectbox("Fecha de Predicciones Pendientes:", pending_dates, index=0)
+                sel_pdate = st.selectbox("Fecha de Predicciones Pendientes:", pending_dates, index=0, key="audit_pdate")
             
             cursor.execute("""
                 SELECT DISTINCT p.track, t.name 
@@ -264,7 +264,7 @@ if nav_mode == "📊 Auditoría y Aprendizaje Continuo":
             track_choices = ["Todos los Hipódromos"] + [f"{r['name'] or r['track']} ({r['track']})" for r in track_rows]
             
             with col_f2:
-                sel_ptrack = st.selectbox("Filtrar por Hipódromo:", track_choices)
+                sel_ptrack = st.selectbox("Filtrar por Hipódromo:", track_choices, key="audit_ptrack")
 
             if sel_ptrack == "Todos los Hipódromos":
                 cursor.execute("""
@@ -313,7 +313,7 @@ if nav_mode == "📊 Auditoría y Aprendizaje Continuo":
         else:
             col_h1, col_h2 = st.columns(2)
             with col_h1:
-                sel_hdate = st.selectbox("Filtrar por Fecha Evaluada:", ["Todas las Fechas"] + hist_dates, index=0)
+                sel_hdate = st.selectbox("Filtrar por Fecha Evaluada:", ["Todas las Fechas"] + hist_dates, index=0, key="audit_hdate")
             
             cursor.execute("""
                 SELECT DISTINCT p.track, t.name 
@@ -326,7 +326,7 @@ if nav_mode == "📊 Auditoría y Aprendizaje Continuo":
             track_h_options = ["Todos los Hipódromos"] + [f"{r['name'] or r['track']} ({r['track']})" for r in hist_tracks]
 
             with col_h2:
-                sel_htrack = st.selectbox("Filtrar por Hipódromo:", track_h_options)
+                sel_htrack = st.selectbox("Filtrar por Hipódromo:", track_h_options, key="audit_htrack")
 
             query = "SELECT * FROM predictions_audit WHERE status = 'EVALUATED'"
             params = []
@@ -366,7 +366,7 @@ if nav_mode == "📊 Auditoría y Aprendizaje Continuo":
             st.success("¡No hay carreras pendientes por liquidar!")
         else:
             with st.form("form_settle"):
-                selected_settle_label = st.selectbox("Selecciona la carrera a verificar:", list(settle_options.keys()))
+                selected_settle_label = st.selectbox("Selecciona la carrera a verificar:", list(settle_options.keys()), key="settle_race_select")
                 sel_race_id = settle_options[selected_settle_label]
 
                 col_w1, col_w2 = st.columns(2)
@@ -453,11 +453,12 @@ elif nav_mode == "📑 Gaceta de Past Performances (DRF)":
     view_filter = st.radio(
         "Modo de Lectura:",
         ["📖 Ver Todos los Ejemplares (Gaceta Completa)", "🎯 Inspeccionar Ejemplar Individual"],
-        horizontal=True
+        horizontal=True,
+        key="pp_view_filter"
     )
 
     if view_filter == "🎯 Inspeccionar Ejemplar Individual":
-        chosen_horse = st.selectbox("Selecciona Ejemplar a Estudiar:", horse_names)
+        chosen_horse = st.selectbox("Selecciona Ejemplar a Estudiar:", horse_names, key="pp_chosen_horse")
         displayed_entries = [e for e in entries if e["horse_name"] == chosen_horse]
     else:
         displayed_entries = entries
