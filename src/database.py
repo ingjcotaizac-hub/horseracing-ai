@@ -139,6 +139,30 @@ def init_database() -> None:
         cursor.execute("ALTER TABLE today_entries ADD COLUMN workouts_json TEXT DEFAULT '[]';")
     except Exception:
         pass
+    try:
+        cursor.execute("ALTER TABLE today_entries ADD COLUMN is_scratched INTEGER DEFAULT 0;")
+    except Exception:
+        pass
+    try:
+        cursor.execute("ALTER TABLE predictions_audit ADD COLUMN enemy_pick TEXT DEFAULT '';")
+    except Exception:
+        pass
+    try:
+        cursor.execute("ALTER TABLE predictions_audit ADD COLUMN enemy_odds REAL DEFAULT NULL;")
+    except Exception:
+        pass
+    try:
+        cursor.execute("ALTER TABLE predictions_audit ADD COLUMN parity_level TEXT DEFAULT 'STANDOUT';")
+    except Exception:
+        pass
+    try:
+        cursor.execute("ALTER TABLE predictions_audit ADD COLUMN parity_reason TEXT DEFAULT '';")
+    except Exception:
+        pass
+    try:
+        cursor.execute("ALTER TABLE predictions_audit ADD COLUMN scratch_status TEXT DEFAULT 'ACTIVE';")
+    except Exception:
+        pass
 
     # Índices para consultas ultrarrápidas de historial
     cursor.execute("CREATE INDEX IF NOT EXISTS idx_horse_name ON race_results(horse_name);")

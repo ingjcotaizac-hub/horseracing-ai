@@ -89,6 +89,12 @@ def record_race_result(
         " | ".join(learning_notes), race_id
     ))
 
+    cursor.execute("""
+        UPDATE races
+        SET status = 'OFFICIAL'
+        WHERE race_id = ?
+    """, (race_id,))
+
     conn.commit()
     conn.close()
     print(f"Carrera {race_id} evaluada: Acierto Ganador={is_hit}, P/L=${profit_loss:+0.2f}")

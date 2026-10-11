@@ -270,11 +270,14 @@ def analyze_race_field(race_id: str) -> Dict[str, Any]:
 
     cursor.execute("""
         SELECT * FROM today_entries
-        WHERE race_id = ?
+        WHERE race_id = ? AND (is_scratched = 0 OR is_scratched IS NULL)
         ORDER BY post_position ASC
     """, (race_id,))
     entries = cursor.fetchall()
     conn.close()
+
+    if not entries:
+        return {}
 
     total_field = len(entries)
     rail_feet = race["rail_distance_feet"] if "rail_distance_feet" in race.keys() and race["rail_distance_feet"] else 0
@@ -321,16 +324,41 @@ def analyze_race_field(race_id: str) -> Dict[str, Any]:
     ranked = sorted(profiles, key=lambda x: x["composite_score"], reverse=True)
     top_score = ranked[0]["composite_score"] if ranked else 100.0
 
-    # 5. Detectar Top Pick, Valor (+EV) y Longshot
+    # 5. Detectar Top Pick, El Enemigo, Nivel de Paridad y Bomba / Valor
     top_pick = ranked[0]
-    value_pick = None
-    longshot_pick = None
+    enemy_pick = ranked[1] if len(ranked) > 1 else None
 
+    # Paridad entre punteros
+    parity_level = "STANDOUT"
+    parity_reason = "Ventaja técnica clara sobre el resto del lote"
+
+    if enemy_pick:
+        score_diff = round(top_pick["composite_score"] - enemy_pick["composite_score"], 1)
+        if score_diff <= 5.5 or top_pick["morning_line_odds"] >= 3.5 or pace_analysis["scenario"] in ["PACE_COLLAPSE", "CONTESTED_PACE"]:
+            parity_level = "HIGH_PARITY"
+            parity_reason = f"Alta paridad: {enemy_pick['horse_name']} a solo {score_diff} pts del líder"
+
+    # Apuesta de Valor (+EV)
+    value_pick = None
     for p in ranked[1:]:
-        if p["morning_line_odds"] >= 3.5 and p["composite_score"] >= (top_score - 6.0) and not value_pick:
+        if p["morning_line_odds"] >= 3.5 and p["composite_score"] >= (top_score - 6.5) and not value_pick:
             value_pick = p
-        elif p["morning_line_odds"] >= 7.0 and p["composite_score"] >= (top_score - 12.0) and not longshot_pick:
+            break
+
+    # Bomba / Sorpresa (8-1 en adelante)
+    longshot_pick = None
+    for p in ranked:
+        if p["horse_name"] == top_pick["horse_name"]:
+            continue
+        if p["morning_line_odds"] >= 8.0 and not longshot_pick:
             longshot_pick = p
+            break
+
+    if not longshot_pick:
+        for p in ranked:
+            if p["horse_name"] != top_pick["horse_name"] and p["morning_line_odds"] >= 6.0:
+                longshot_pick = p
+                break
 
     return {
         "race": dict(race),
@@ -338,6 +366,9 @@ def analyze_race_field(race_id: str) -> Dict[str, Any]:
         "profiles": profiles,
         "ranked_profiles": ranked,
         "top_pick": top_pick,
+        "enemy_pick": enemy_pick,
+        "parity_level": parity_level,
+        "parity_reason": parity_reason,
         "value_pick": value_pick,
         "longshot_pick": longshot_pick
     }
